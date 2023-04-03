@@ -78,12 +78,45 @@ public class MyLinkedList <T> implements IArray<T> {
 
     @Override
     public int indexOf(T obj) {
-        return 0;
+        int index = 0;
+        if(obj==null){
+            for (Node<T> cur = head; cur!=null; cur = cur.next){
+                if(cur.data == null){
+                    return index;
+
+                }
+                index++;
+            }
+        }else {
+            for(Node<T> cur = head; cur!=null; cur = cur.next){
+                if(cur.data.equals(obj)){
+                    return index;
+                }
+                index++;
+            }
+        }
+        return index;
     }
 
     @Override
     public int lastIndexOf(T obj) {
-        return 0;
+        int index= size -1;
+        if(obj==null){
+            for(Node<T> cur = tail; cur!= null; cur = cur.prev){
+                if(cur.data ==null){
+                    return index;
+                }
+                index--;
+            }
+        }else{
+            for(Node<T> cur = tail; cur!=null; cur = cur.prev){
+                if(cur.data.equals(obj)){
+                    return index;
+                }
+                index--;
+            }
+        }
+        return index;
     }
 
     @Override
@@ -109,6 +142,33 @@ public class MyLinkedList <T> implements IArray<T> {
 
     @Override
     public boolean remove(T obj) {
+        int index = 0;
+        if(obj==null){
+            for(Node<T> cur = head; cur!= null; cur = cur.next){
+                if(cur.data ==null){
+                    try {
+                        remove(indexOf(cur.data));
+                        return true;
+                    }catch (Exception e){
+                        return false;
+                    }
+
+                }
+                index++;
+            }
+        }else{
+            for(Node<T> cur = head; cur!=null; cur = cur.next){
+                if(cur.data.equals(obj)){
+                    try {
+                        remove(indexOf(cur.data));
+                        return true;
+                    }catch (Exception e){
+                        return false;
+                    }
+                }
+                index++;
+            }
+        }
         return false;
     }
 
@@ -163,7 +223,41 @@ public class MyLinkedList <T> implements IArray<T> {
     }
 
     @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    @Override
+    public void clear() {
+        Node<T> cur= tail;
+        while(cur!=null){
+            Node<T> prev = cur.prev;
+            cur.prev = null;
+            cur.next = null;
+            cur.data = null;
+            cur = prev;
+        }
+        head = null;
+        tail = null;
+        size = 0;
+    }
+
+    @Override
     public Iterator<T> iterator() {
-        return null;
+
+        return new Iterator<T>() {
+            Node<T> current = head;
+            @Override
+            public boolean hasNext() {
+                return current != null;
+            }
+
+            @Override
+            public T next() {
+                T obj = current.data;;
+                current = current.next;
+                return obj;
+            }
+        };
     }
 }

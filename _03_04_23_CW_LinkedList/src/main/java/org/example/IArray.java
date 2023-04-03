@@ -26,4 +26,6 @@ public interface IArray<T> extends Iterable<T>
     boolean removeIf(Predicate<T> pred);
     int indexOf(Predicate<T> pred);
     int lastIndexOf(Predicate<T> pred);
+    boolean isEmpty();
+    void clear();
 }
