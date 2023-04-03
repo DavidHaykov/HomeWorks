@@ -88,7 +88,23 @@ public class MyLinkedList <T> implements IArray<T> {
 
     @Override
     public T remove(int index) {
-        return null;
+        Node<T> node = getNodeByIndex(index);
+        if(size == 1){
+            head = null;
+            tail = null;
+        } else if (node.prev == null) {
+            node.next.prev = null;
+            head = head.next;
+        } else if (node.next==null) {
+            node.prev.next = null;
+            tail = tail.prev;
+        }else {
+
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+        }
+        size--;
+        return node.data;
     }
 
     @Override
