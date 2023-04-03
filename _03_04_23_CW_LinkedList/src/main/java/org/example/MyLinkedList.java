@@ -24,7 +24,21 @@ public class MyLinkedList <T> implements IArray<T> {
 
     @Override
     public boolean add(T obj) {
-        return false;
+        if (obj==null) {
+            return false;
+        }
+        Node<T> node = new Node<>(obj, tail, null);
+        if(tail==null){
+            head = node;
+            tail = node;
+        }else {
+            tail.next = node;
+            node.prev = tail;
+            tail = node;
+        }
+        tail = node;
+        size++;
+        return true;
     }
 
     @Override
@@ -34,12 +48,32 @@ public class MyLinkedList <T> implements IArray<T> {
 
     @Override
     public T get(int index) {
-        return null;
+        Node<T> node = getNodeByIndex(index);
+        return node.data;
+    }
+
+    private Node<T> getNodeByIndex(int index) {
+        if(index<0||index>=size){
+            throw new IllegalArgumentException();
+        }
+        Node<T> current;
+        if(index<=size/2){
+            current = head;
+            for(int i =0; i< index; i++){
+                current = current.next;
+            }
+        }else{
+            current = tail;
+            for(int i = size -1; i > index; i--){
+                current = current.prev;
+            }
+        }
+        return current;
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -64,7 +98,7 @@ public class MyLinkedList <T> implements IArray<T> {
 
     @Override
     public boolean contains(T obj) {
-        return false;
+        return this.indexOf(obj) != -1;
     }
 
     @Override
