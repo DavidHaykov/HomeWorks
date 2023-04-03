@@ -5,6 +5,23 @@ import java.util.Iterator;
 import java.util.function.Predicate;
 
 public class MyLinkedList <T> implements IArray<T> {
+    private static class Node <T>  {
+        T data;
+        Node<T> prev;
+        Node<T> next;
+
+        public Node(T data, Node<T> prev, Node<T> next) {
+            this.data = data;
+            this.prev = prev;
+            this.next = next;
+        }
+    }
+
+    int size;
+    Node<T> head;
+    Node<T> tail;
+
+
     @Override
     public boolean add(T obj) {
         return false;
