@@ -2,21 +2,25 @@ package org.example;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Set;
 import java.util.function.Predicate;
 
 public class HashSetClass extends AbstractSet{
-
-    public HashSetClass() {
-        super(new HashSet<>());
+    private HashSet<Integer> numbers;
+    public HashSetClass(Collection<Integer> numbers) {
+        super(numbers);
+        this.numbers = new HashSet<>(numbers);
     }
 
+
     @Override
-    public void removeDividedBy(int number) {
-        numbers.removeIf(new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
-                return number%integer==0;
+    public void removeInRange(int fromInclusive, int toExclusive) {
+        Set<Integer> toRemove = new HashSet<>();
+        for (int num : numbers) {
+            if (num >= fromInclusive && num < toExclusive) {
+                toRemove.add(num);
             }
-        });
+        }
+        numbers.removeAll(toRemove);
     }
 }

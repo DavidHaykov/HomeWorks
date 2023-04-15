@@ -1,32 +1,34 @@
 package org.example;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Predicate;
 
 public class LinkedListClass extends AbstractList {
-
-    public LinkedListClass() {
-        super(new LinkedList<>());
+    private LinkedList<Integer> numbers;
+    public LinkedListClass(Collection<Integer> numbers) {
+        super(numbers);
+        this.numbers = new LinkedList<>(numbers);
     }
 
     @Override
-    public void removeRepeated() {
-        Set<Integer> notRepeated = new HashSet<>(numbers);
-        numbers.clear();
-        numbers.addAll(notRepeated);
+    public void removeDividedBy(int number) {
+        ListIterator<Integer> iterator = numbers.listIterator();
+        while (iterator.hasNext()) {
+            if (iterator.next() % number == 0) {
+                iterator.remove();
+            }
+        }
     }
 
     @Override
     public void removeInRange(int fromInclusive, int toExclusive) {
-        numbers.removeIf(new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
-                return integer >= fromInclusive && integer < toExclusive;
+        ListIterator<Integer> iterator = numbers.listIterator();
+        while (iterator.hasNext()) {
+            int num = iterator.next();
+            if (num >= fromInclusive && num < toExclusive) {
+                iterator.remove();
             }
-        });
+        }
     }
 }
 

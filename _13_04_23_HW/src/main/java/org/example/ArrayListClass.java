@@ -1,21 +1,23 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Predicate;
 
 public class ArrayListClass extends AbstractList {
-    public ArrayListClass() {
-        super(new ArrayList<>());
+    private ArrayList<Integer> numbers;
+    public ArrayListClass(Collection<Integer> numbers) {
+        super(numbers);
+        this.numbers = new ArrayList<>(numbers);
     }
 
     @Override
-    public void removeRepeated() {
-        Set<Integer> notRepeated = new HashSet<>(numbers);
-        numbers.clear();
-        numbers.addAll(notRepeated);
+    public void removeDividedBy(int number) {
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) % number == 0) {
+                numbers.remove(i);
+                i--;
+            }
+        }
     }
 
     @Override

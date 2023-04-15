@@ -1,20 +1,22 @@
 package org.example;
 
+import java.awt.*;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.function.Predicate;
 
 public abstract class AbstractList extends AbstractCollection {
     public AbstractList(Collection<Integer> numbers) {
         super(numbers);
     }
-    public void removeDividedBy(int number) {
-        numbers.removeIf(new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
-                return integer%number==0;
-            }
-        });
+    @Override
+    public void removeRepeated() {
+        Set<Integer> notRepeat = new HashSet<>(numbers);
+        numbers.clear();
+        numbers.addAll(notRepeat);
     }
+
 }
 
 

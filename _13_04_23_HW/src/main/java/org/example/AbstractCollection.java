@@ -1,9 +1,11 @@
 package org.example;
 
 import java.util.Collection;
+import java.util.function.Predicate;
 
 public abstract class AbstractCollection implements INumbersBox {
     protected Collection<Integer> numbers;
+
 
     public AbstractCollection(Collection<Integer> numbers) {
         this.numbers = numbers;
@@ -27,6 +29,8 @@ public abstract class AbstractCollection implements INumbersBox {
     @Override
     public abstract void removeRepeated();
 
+    @Override
+    public abstract void removeDividedBy(int number);
 
     @Override
     public int size() {
