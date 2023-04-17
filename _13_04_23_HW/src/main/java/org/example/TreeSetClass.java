@@ -5,10 +5,19 @@ import java.util.TreeSet;
 import java.util.function.Predicate;
 
 public class TreeSetClass extends AbstractSet{
-    private TreeSet<Integer> numbers;
 
-    public TreeSetClass(Collection<Integer> numbers, TreeSet<Integer> numbers1) {
-        super(numbers);
-        this.numbers ;
+
+    public TreeSetClass(Collection<Integer> numbers) {
+
+        numbers = new TreeSet<>();
     }
+
+    @Override
+    public void removeInRange(int fromInclusive, int toExclusive) {
+
+    }
+    public void display() {
+        System.out.println(numbers);
+    }
+
 }

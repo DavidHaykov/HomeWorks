@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 
 public abstract class AbstractList extends AbstractCollection {
     public AbstractList(Collection<Integer> numbers) {
-        super(numbers);
+        this.numbers = numbers;
     }
     @Override
     public void removeRepeated() {

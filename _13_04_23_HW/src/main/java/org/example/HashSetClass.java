@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 public class HashSetClass extends AbstractSet{
     private HashSet<Integer> numbers;
     public HashSetClass(Collection<Integer> numbers) {
-        super(numbers);
+
         this.numbers = new HashSet<>(numbers);
     }
 

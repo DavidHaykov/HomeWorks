@@ -16,6 +16,6 @@ public class NumberBoxAppl {
         tree.removeInRange(2,7);
         tree.display();
 
-        ArrayListClass arrayListClass = new ArrayListClass()
+
     }
 }

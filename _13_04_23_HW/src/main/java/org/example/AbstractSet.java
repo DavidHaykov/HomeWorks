@@ -5,9 +5,7 @@ import java.util.function.Predicate;
 
 public abstract class AbstractSet extends AbstractCollection {
 
-    public AbstractSet(Collection<Integer> numbers) {
-        super(numbers);
-    }
+
     @Override
     public void removeRepeated() {
         //

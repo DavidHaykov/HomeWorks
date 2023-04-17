@@ -7,9 +7,7 @@ public abstract class AbstractCollection implements INumbersBox {
     protected Collection<Integer> numbers;
 
 
-    public AbstractCollection(Collection<Integer> numbers) {
-        this.numbers = numbers;
-    }
+
 
     @Override
     public void addNumber(int number) {
