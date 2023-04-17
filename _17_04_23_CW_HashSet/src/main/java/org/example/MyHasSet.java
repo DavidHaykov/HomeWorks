@@ -30,12 +30,12 @@ public class MyHasSet<E> implements Set<E> {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
@@ -78,7 +78,18 @@ public class MyHasSet<E> implements Set<E> {
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        Object[] res = new Object[size];
+        int index = 0;
+        for(int i = 0; i < table.length; i++){
+            if(table[i] == null || table[i].isEmpty()){
+                continue;
+            }
+            for(Object o : table[i]){
+                res[index] = o;
+                index++;
+            }
+        }
+        return res;
     }
 
     @Override
@@ -104,6 +115,7 @@ public class MyHasSet<E> implements Set<E> {
 
     }
     public void recreation(){
+        capacity += 16;
         LinkedList[] temp = new LinkedList[capacity+16];
         for(int i = 0; i < table.length; i++){
             if(table[i] == null){
@@ -139,12 +151,24 @@ public class MyHasSet<E> implements Set<E> {
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+
+        for(Object o : c){
+            if(!contains(o)){
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public boolean addAll(Collection<? extends E> c) {
-        return false;
+        boolean added = false;
+        for (E e : c) {
+            if (add(e)) {
+                added = true;
+            }
+        }
+        return added;
     }
 
     @Override
@@ -154,11 +178,22 @@ public class MyHasSet<E> implements Set<E> {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return false;
+        boolean removed = false;
+        for(Object e : c){
+            if(remove(e)){
+                removed = true;
+            }
+        }
+        return  removed;
     }
 
     @Override
     public void clear() {
-
+        for(int i = 0; i< table.length; i++){
+            if(table[i] != null){
+                table[i].clear();
+            }
+            size = 0;
+        }
     }
 }
