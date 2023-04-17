@@ -40,12 +40,40 @@ public class MyHasSet<E> implements Set<E> {
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        int index = getIndex(o);
+        if(table[index] == null) {
+            return false;
+        }
+        return table[index].contains(o);
     }
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new Iterator<E>() {
+            int totalCount = 0;
+            int arrayIndex = 0;
+            int listIndex = 0;
+            @Override
+            public boolean hasNext() {
+                return totalCount < size;
+            }
+
+            @Override
+            public E next() {
+                while(table[arrayIndex]==null || table[arrayIndex].isEmpty()){
+                    arrayIndex++;
+                }
+                E res = table[arrayIndex].get(listIndex);
+                totalCount++;
+                if(listIndex < table[arrayIndex].size()-1){
+                    listIndex++;
+                }else{
+                    listIndex = 0;
+                    arrayIndex++;
+                }
+                return null;
+            }
+        };
     }
 
     @Override
@@ -75,15 +103,38 @@ public class MyHasSet<E> implements Set<E> {
         return true;
 
     }
+    public void recreation(){
+        LinkedList[] temp = new LinkedList[capacity+16];
+        for(int i = 0; i < table.length; i++){
+            if(table[i] == null){
+                continue;
+            }
+            for (E obj: table[i]) {
+                int index = getIndex(obj);
+                if(temp[index] == null){
+                    temp[index] = new LinkedList<>();
+                }
+                temp[index].add(obj);
+            }
+        }
+        table = temp;
+    }
 
-    private int getIndex(E e) {
-
-        return 0;
+    private int getIndex(Object obj) {
+        int hash = obj.hashCode();
+        return Math.abs(hash) % capacity;
     }
 
     @Override
     public boolean remove(Object o) {
-        return false;
+        if(!contains(o)) {
+            return false;
+        }
+        int index = getIndex(o);
+        table[index].remove(o);
+        size--;
+        return true;
+
     }
 
     @Override
