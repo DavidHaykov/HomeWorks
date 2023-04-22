@@ -83,7 +83,7 @@ public class ProgrammersMaps implements IProgrammer{
 
     @Override
     public boolean updateSalary(int id, int salary) throws Exception {
-        if(programmers.get(id).getSalary() == salary) {
+        if(!programmers.containsKey(id) || programmers.get(id).getSalary() == salary) {
             return false;
         }
         programmers.get(id).setSalary(salary);
