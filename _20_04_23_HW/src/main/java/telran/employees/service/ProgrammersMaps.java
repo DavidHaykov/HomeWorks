@@ -2,14 +2,13 @@ package telran.employees.service;
 
 import telran.employees.dto.Programmer;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class ProgrammersMaps implements IProgrammer{
     protected HashMap<Integer, Programmer> programmers;
 
-    public ProgrammersMaps(HashMap<Integer, Programmer> programmers) {
-        this.programmers = programmers;
+    public ProgrammersMaps() {
+        programmers = new HashMap<>();
     }
 
 
@@ -39,27 +38,62 @@ public class ProgrammersMaps implements IProgrammer{
 
     @Override
     public boolean addNewTechnology(int id, String technology) {
-
-        return false;
+        if(!programmers.containsKey(id)){
+            return false;
+        }
+        Set<String> updatedTechnologies = new HashSet<>(programmers.get(id).getTechnologies());
+        updatedTechnologies.add(technology);
+        programmers.put(id, new Programmer(id, programmers.get(id).getName(), updatedTechnologies, programmers.get(id).getSalary()));
+        return true;
     }
 
     @Override
     public boolean removeTechnology(int id, String technology) {
-        return false;
+        if(!programmers.containsKey(id) || !programmers.get(id).getTechnologies().contains(technology)) {
+            return false;
+        }
+        Set<String> updatedTechnologies = new HashSet<>(programmers.get(id).getTechnologies());
+        updatedTechnologies.remove(technology);
+        programmers.put(id, new Programmer(id, programmers.get(id).getName(), updatedTechnologies, programmers.get(id).getSalary()));
+        return true;
     }
 
     @Override
     public List<Programmer> getProgrammersWithTechnology(String technology) {
-        return null;
+        List<Programmer> programmersWithTechnologies = new ArrayList<>();
+        for (Programmer e:
+             programmers.values()) {
+            if(e.getTechnologies().contains(technology)) {
+                programmersWithTechnologies.add(e);
+            }
+        }
+        return programmersWithTechnologies;
     }
 
     @Override
     public List<Programmer> getProgrammerWithSalaries(int salaryFrom, int salaryTo) {
-        return null;
+        List<Programmer> programmersInSalaryRange = new ArrayList<>();
+        for (Programmer e : programmers.values()){
+            if(e.getSalary()>=salaryFrom && e.getSalary()<salaryTo){
+                programmersInSalaryRange.add(e);
+            }
+        }
+        return programmersInSalaryRange;
     }
 
     @Override
-    public boolean updateSalary(int id, int salary) {
-        return false;
+    public boolean updateSalary(int id, int salary) throws Exception {
+        if(programmers.get(id).getSalary() == salary) {
+            return false;
+        }
+        programmers.get(id).setSalary(salary);
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "ProgrammersMaps{\n" +
+                "programmers=\n" + programmers +
+                '}';
     }
 }

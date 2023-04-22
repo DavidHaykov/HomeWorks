@@ -33,8 +33,8 @@ public class Programmer {
     }
 
     public void setSalary(int salary) throws Exception {
-        if(salary!=0) {
-            throw new Exception("Salary = 0");
+        if(salary <= 0) {
+            throw new Exception("Not legal salary");
         }
             try {
                 this.salary = salary;
@@ -45,12 +45,12 @@ public class Programmer {
 
     @Override
     public String toString() {
-        return "Programmer{" +
+        return  "Programmer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", technologies=" + technologies +
                 ", salary=" + salary +
-                '}';
+                '}'  + "\n";
     }
 
 
