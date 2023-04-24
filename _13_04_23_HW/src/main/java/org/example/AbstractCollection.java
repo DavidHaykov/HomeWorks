@@ -28,7 +28,14 @@ public abstract class AbstractCollection implements INumbersBox {
     public abstract void removeRepeated();
 
     @Override
-    public abstract void removeDividedBy(int number);
+    public  void removeDividedBy(int number){
+        numbers.removeIf(new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer integer) {
+                return integer%number==0;
+            }
+        });
+    }
 
     @Override
     public int size() {
@@ -36,5 +43,12 @@ public abstract class AbstractCollection implements INumbersBox {
     }
 
     @Override
-    public abstract void removeInRange(int fromInclusive, int toExclusive);
+    public void removeInRange(int fromInclusive, int toExclusive){
+        numbers.removeIf(new Predicate<Integer>() {
+            @Override
+            public boolean test(Integer integer) {
+                return integer>= fromInclusive && integer < toExclusive;
+            }
+        });
+    }
 }
