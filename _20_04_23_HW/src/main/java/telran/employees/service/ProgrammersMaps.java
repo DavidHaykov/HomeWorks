@@ -59,6 +59,7 @@ public class ProgrammersMaps implements IProgrammer{
                 salaryProgrammers.remove(salary);
             }
         }
+        programmers.remove(id);
 
         return true;
     }
