@@ -3,12 +3,16 @@ package telran.employees.service;
 import telran.employees.dto.Programmer;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class ProgrammersMaps implements IProgrammer{
     protected HashMap<Integer, Programmer> programmers;
-
+    protected HashMap<String, List<Programmer>> techProgrammers;
+    protected TreeMap<Integer, List<Programmer>> salaryProgrammers;
     public ProgrammersMaps() {
         programmers = new HashMap<>();
+        techProgrammers = new HashMap<>();
+        salaryProgrammers = new TreeMap<>();
     }
 
 
@@ -18,12 +22,45 @@ public class ProgrammersMaps implements IProgrammer{
             return false;
         }
         programmers.putIfAbsent(programmer.getId(), programmer);
+        for(String technology : programmer.getTechnologies()){
+            if(!techProgrammers.containsKey(technology)){
+                techProgrammers.put(technology, new ArrayList<>());
+            }
+            techProgrammers.get(technology).add(programmer);
+        }
+        int salary = programmer.getSalary();
+        if(!salaryProgrammers.containsKey(salary)){
+            salaryProgrammers.put(salary, new ArrayList<>());
+        }
+        salaryProgrammers.get(salary).add(programmer);
         return true;
     }
 
     @Override
     public boolean removeProgrammer(int id) {
-        return programmers.remove(id) != null;
+        Programmer programmer = programmers.get(id);
+        if(programmer == null ){
+            return false;
+        }
+        for(String technology : programmer.getTechnologies()){
+            List<Programmer> programmersList = techProgrammers.get(technology);
+            if(programmersList!=null){
+                programmersList.remove(programmer);
+                if(programmersList.isEmpty()){
+                    techProgrammers.remove(technology);
+                }
+            }
+        }
+        int salary = programmer.getSalary();
+        List<Programmer> programmerList = salaryProgrammers.get(salary);
+        if(programmerList!=null){
+            programmerList.remove(programmer);
+            if(programmerList.isEmpty()){
+                salaryProgrammers.remove(salary);
+            }
+        }
+
+        return true;
     }
 
     @Override
@@ -37,7 +74,12 @@ public class ProgrammersMaps implements IProgrammer{
         if(technology == null || technology.equals("")){
             return false;
         }
-        return programmer != null && programmer.getTechnologies().add(technology);
+        programmer.getTechnologies().add(technology);
+        if(!techProgrammers.containsKey(technology)){
+            techProgrammers.put(technology, new ArrayList<>());
+        }
+        techProgrammers.get(technology).add(programmer);
+        return true;
     }
 
     @Override
@@ -46,31 +88,30 @@ public class ProgrammersMaps implements IProgrammer{
         if(technology == null || technology.equals("") || !programmer.getTechnologies().contains(technology)){
             return false;
         }
-        return programmer.getTechnologies().remove(technology);
+        programmer.getTechnologies().remove(technology);
+        List<Programmer> programmerList = techProgrammers.get(technology);
+        if(programmerList!=null){
+            programmerList.remove(programmer);
+            if(programmerList.isEmpty()){
+                techProgrammers.remove(technology);
+            }
+        }
+        return true;
 
     }
 
     @Override
     public List<Programmer> getProgrammersWithTechnology(String technology) {
-        List<Programmer> programmersWithTechnologies = new ArrayList<>();
-        for (Programmer e:
-             programmers.values()) {
-            if(e.getTechnologies().contains(technology)) {
-                programmersWithTechnologies.add(e);
-            }
-        }
-        return programmersWithTechnologies;
+        return techProgrammers.get(technology);
     }
 
     @Override
     public List<Programmer> getProgrammerWithSalaries(int salaryFrom, int salaryTo) {
-        List<Programmer> programmersInSalaryRange = new ArrayList<>();
-        for (Programmer e : programmers.values()){
-            if(e.getSalary()>=salaryFrom && e.getSalary()<salaryTo){
-                programmersInSalaryRange.add(e);
-            }
+        List<Programmer> res = new ArrayList<>();
+        for(List<Programmer> programmersList : salaryProgrammers.subMap(salaryFrom, salaryTo).values()){
+            res.addAll(programmersList);
         }
-        return programmersInSalaryRange;
+        return res;
     }
 
     @Override
@@ -78,14 +119,14 @@ public class ProgrammersMaps implements IProgrammer{
         if(!programmers.containsKey(id) || programmers.get(id).getSalary() == salary) {
             return false;
         }
-        programmers.get(id).setSalary(salary);
+        Programmer programmer = programmers.get(id);
+        salaryProgrammers.remove(programmer.getSalary());
+        programmer.setSalary(salary);
+        List<Programmer> programmerList = salaryProgrammers.getOrDefault(salary, new ArrayList<>());
+        programmerList.add(programmer);
+        salaryProgrammers.put(salary, programmerList);
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "ProgrammersMaps{\n" +
-                "programmers=\n" + programmers +
-                '}';
-    }
+
 }

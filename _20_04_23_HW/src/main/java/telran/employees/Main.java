@@ -41,5 +41,11 @@ public class Main {
         System.out.println(map.getProgrammerWithSalaries(10000, 18000));
         map.updateSalary(3344561, 1500);
         System.out.println(map.getProgrammerData(3344561));
+
+
+
+        map.updateSalary(3344561, 1400);
+        System.out.println(map);
+        map.displaySalary();
     }
 }
