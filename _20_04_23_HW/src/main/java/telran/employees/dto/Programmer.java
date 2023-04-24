@@ -22,8 +22,6 @@ public class Programmer {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-
-
         this.salary = salary;
     }
 
