@@ -33,20 +33,21 @@ public class ProgrammersMaps implements IProgrammer{
 
     @Override
     public boolean addNewTechnology(int id, String technology) {
-        if(!programmers.containsKey(id)){
+        Programmer programmer = programmers.get(id);
+        if(technology == null || technology.equals("")){
             return false;
         }
-        programmers.get(id).getTechnologies().add(technology);
-        return true;
+        return programmer != null && programmer.getTechnologies().add(technology);
     }
 
     @Override
     public boolean removeTechnology(int id, String technology) {
-        if(!programmers.containsKey(id) || !programmers.get(id).getTechnologies().contains(technology)) {
+        Programmer programmer = programmers.get(id);
+        if(technology == null || technology.equals("") || !programmer.getTechnologies().contains(technology)){
             return false;
         }
-        programmers.get(id).getTechnologies().remove(technology);
-        return true;
+        return programmer.getTechnologies().remove(technology);
+
     }
 
     @Override
