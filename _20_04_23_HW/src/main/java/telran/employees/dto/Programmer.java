@@ -11,10 +11,18 @@ public class Programmer {
     private Set<String> technologies;
     private int salary;
 
-    public Programmer(int id, String name, String[]  technologies_for_add, int salary) {
+    public Programmer(int id, String name, String[]  technologies_for_add, int salary) throws Exception {
         this.id = id;
         this.name = name;
-        technologies = new HashSet<>(List.of(technologies_for_add));
+        if(technologies_for_add==null){
+            throw new Exception("Not added technologies");
+        }
+        try {
+            technologies = new HashSet<>(List.of(technologies_for_add));
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
 
         this.salary = salary;
     }
