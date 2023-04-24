@@ -6,10 +6,7 @@ import java.util.function.Predicate;
 public abstract class AbstractSet extends AbstractCollection {
 
 
-    @Override
-    public void removeRepeated() {
-        //
-    }
+
 
     public void removeDividedBy(int number) {
         Set<Integer> toRemove = new HashSet<>();

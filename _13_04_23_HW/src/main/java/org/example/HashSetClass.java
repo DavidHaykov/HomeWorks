@@ -14,6 +14,11 @@ public class HashSetClass extends AbstractSet{
 
 
     @Override
+    public void removeRepeated() {
+
+    }
+
+    @Override
     public void removeInRange(int fromInclusive, int toExclusive) {
         Set<Integer> toRemove = new HashSet<>();
         for (int num : numbers) {
