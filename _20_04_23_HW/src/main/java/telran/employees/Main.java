@@ -46,6 +46,6 @@ public class Main {
 
         map.updateSalary(3344561, 1400);
         System.out.println(map);
-        map.displaySalary();
+
     }
 }
