@@ -41,9 +41,7 @@ public class ProgrammersMaps implements IProgrammer{
         if(!programmers.containsKey(id)){
             return false;
         }
-        Set<String> updatedTechnologies = new HashSet<>(programmers.get(id).getTechnologies());
-        updatedTechnologies.add(technology);
-        programmers.put(id, new Programmer(id, programmers.get(id).getName(), updatedTechnologies, programmers.get(id).getSalary()));
+        programmers.get(id).getTechnologies().add(technology);
         return true;
     }
 
@@ -52,9 +50,7 @@ public class ProgrammersMaps implements IProgrammer{
         if(!programmers.containsKey(id) || !programmers.get(id).getTechnologies().contains(technology)) {
             return false;
         }
-        Set<String> updatedTechnologies = new HashSet<>(programmers.get(id).getTechnologies());
-        updatedTechnologies.remove(technology);
-        programmers.put(id, new Programmer(id, programmers.get(id).getName(), updatedTechnologies, programmers.get(id).getSalary()));
+        programmers.get(id).getTechnologies().remove(technology);
         return true;
     }
 

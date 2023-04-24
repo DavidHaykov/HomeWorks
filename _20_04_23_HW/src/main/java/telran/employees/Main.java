@@ -3,9 +3,7 @@ package telran.employees;
 import telran.employees.dto.Programmer;
 import telran.employees.service.ProgrammersMaps;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 
 public class Main {
@@ -19,26 +17,11 @@ public class Main {
     public static final String PYTHON = "Dev is a gay";
     public static final String FORTRAN = "Dev is a old fart";
     public static void main(String[] args) throws Exception {
-        Set<String> backendDevSkills = new HashSet<>();
-        Set<String> backendDevSkills_1 = new HashSet<>();
-        Set<String> frontendDevSkills = new HashSet<>();
-        Set<String> fullStackSkills = new HashSet<>();
-        backendDevSkills.add(SPRING_FRAMEWORK);
-        backendDevSkills.add(JAVA);
-        backendDevSkills.add(C_PLUS_PLUS);
-        backendDevSkills_1.add(PYTHON);
-        backendDevSkills_1.add(FORTRAN);
-        frontendDevSkills.add(HTML_CSS);
-        frontendDevSkills.add(JAVA_SCRIPT);
-        frontendDevSkills.add(REACT);
-        frontendDevSkills.add(ANGULAR);
-        fullStackSkills.add(HTML_CSS);
-        fullStackSkills.add(JAVA_SCRIPT);
-        fullStackSkills.add(REACT);
-        fullStackSkills.add(ANGULAR);
-        fullStackSkills.add(JAVA);
-        fullStackSkills.add(SPRING_FRAMEWORK);
-        fullStackSkills.add(C_PLUS_PLUS);
+        String [] backendDevSkills = {JAVA,SPRING_FRAMEWORK,C_PLUS_PLUS};
+        String[] backendDevSkills_1 = {FORTRAN, PYTHON};
+        String[] frontendDevSkills = {HTML_CSS,JAVA_SCRIPT, REACT, ANGULAR};
+        String[] fullStackSkills = {HTML_CSS, JAVA_SCRIPT, REACT, ANGULAR, JAVA, C_PLUS_PLUS, SPRING_FRAMEWORK};
+
 
         Programmer programmer_1 = new Programmer(3345671, "Dudu", backendDevSkills, 10000);
         Programmer programmer_2 = new Programmer(3343434, "Alex", frontendDevSkills, 15000);
@@ -58,9 +41,5 @@ public class Main {
         System.out.println(map.getProgrammerWithSalaries(10000, 18000));
         map.updateSalary(3344561, 1500);
         System.out.println(map.getProgrammerData(3344561));
-
-
-
-
     }
 }

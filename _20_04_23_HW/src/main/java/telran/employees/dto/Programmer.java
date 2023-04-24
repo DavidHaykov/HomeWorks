@@ -1,5 +1,7 @@
 package telran.employees.dto;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -9,10 +11,11 @@ public class Programmer {
     private Set<String> technologies;
     private int salary;
 
-    public Programmer(int id, String name, Set<String> technologies, int salary) {
+    public Programmer(int id, String name, String[]  technologies_for_add, int salary) {
         this.id = id;
         this.name = name;
-        this.technologies = technologies;
+        technologies = new HashSet<>(List.of(technologies_for_add));
+
         this.salary = salary;
     }
 
