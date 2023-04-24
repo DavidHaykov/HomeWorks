@@ -17,18 +17,13 @@ public class ProgrammersMaps implements IProgrammer{
         if (programmers.containsKey(programmer.getId())) {
             return false;
         }
-        programmers.put(programmer.getId(), programmer);
+        programmers.putIfAbsent(programmer.getId(), programmer);
         return true;
     }
 
     @Override
     public boolean removeProgrammer(int id) {
-        if(!programmers.containsKey(id)){
-            return false;
-        }else {
-            programmers.remove(id);
-            return true;
-        }
+        return programmers.remove(id) != null;
     }
 
     @Override
