@@ -22,17 +22,18 @@ public class ProgrammersMaps implements IProgrammer{
             return false;
         }
         programmers.putIfAbsent(programmer.getId(), programmer);
-        for(String technology : programmer.getTechnologies()){
-            if(!techProgrammers.containsKey(technology)){
+        for(String technology : programmer.getTechnologies()) {
+            if (!techProgrammers.containsKey(technology)) {
                 techProgrammers.put(technology, new ArrayList<>());
             }
             techProgrammers.get(technology).add(programmer);
+            int salary = programmer.getSalary();
+            if(!salaryProgrammers.containsKey(salary)){
+                salaryProgrammers.put(salary, new ArrayList<>());
+            }
+            salaryProgrammers.get(salary).add(programmer);
+
         }
-        int salary = programmer.getSalary();
-        if(!salaryProgrammers.containsKey(salary)){
-            salaryProgrammers.put(salary, new ArrayList<>());
-        }
-        salaryProgrammers.get(salary).add(programmer);
         return true;
     }
 
