@@ -34,8 +34,12 @@ public class Main {
         map.addProgrammer(programmer_4);
         System.out.println(map.toString());
         map.addNewTechnology(3344561, "legarbetz");
+        System.out.println("\n\nCHECK");
+        System.out.println(map);
         System.out.println(map.getProgrammerData(3344561));
         map.removeTechnology(3344561, "legarbetz");
+        System.out.println(map);
+        System.out.println("\n\nCHECK!!!!!!!!");
         System.out.println(map.getProgrammerData(3344561));
         System.out.println(map.getProgrammersWithTechnology("Java"));
         System.out.println(map.getProgrammerWithSalaries(10000, 18000));
