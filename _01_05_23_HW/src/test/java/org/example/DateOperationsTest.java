@@ -26,7 +26,7 @@ class DateOperationsTest {
     }
     @Test
     void printCurrentTimeForZonesTest (){
-        DateOperations.printCurrentTime("America/New_York");
+        DateOperations.printCurrentTime("America");
         // ‹zone nae containing America>-HH:MM
     }
 

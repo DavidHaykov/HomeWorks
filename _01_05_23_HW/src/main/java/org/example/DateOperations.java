@@ -15,32 +15,40 @@ public class DateOperations {
         datesSort.sort(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if(LocalDate.parse(o1, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getYear()!=LocalDate.parse(o2, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getYear()) {
-                    return LocalDate.parse(o1, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getYear() - LocalDate.parse(o2, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getYear();
-                }else if(LocalDate.parse(o1, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getMonth()!=LocalDate.parse(o2, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getMonth()){
-                    return LocalDate.parse(o1, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getMonth().compareTo(LocalDate.parse(o2, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getMonth());
-                }else if(LocalDate.parse(o1, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getDayOfMonth()!=LocalDate.parse(o2, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getDayOfMonth()){
-                    return LocalDate.parse(o1, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getDayOfMonth() - LocalDate.parse(o2, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")).getDayOfMonth();
-                }else {
-                    return 0;
-                }
+                return LocalDate.parse(o1, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]"))
+                        .compareTo(LocalDate.parse(o2, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]")));
             }
         });
-
-
         System.out.println(datesSort);
         return datesSort.toArray(new String[0]);
     }
 
     public static Long getAge(String birthDate, String currentDate) {
         LocalDate birth = LocalDate.parse(birthDate, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]"));
-        LocalDate current = LocalDate.parse(currentDate, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]"));
+        LocalDate current;
+        if(currentDate != null){
+            current = LocalDate.parse(currentDate, DateTimeFormatter.ofPattern("[dd/MM/yyyy][yyyy-MM-dd]"));
+        }else{
+            current = LocalDate.now();
+        }
+
         return ChronoUnit.YEARS.between(birth, current);
     }
 
     public static void printCurrentTime(String zoneName) {
-        ZonedDateTime zdt = ZonedDateTime.of(LocalDateTime.now(), ZoneId.of(zoneName));
-        System.out.println("<" + zoneName + ">-" + zdt.format(DateTimeFormatter.ofPattern("hh:mm")));
+        List<String>  zones = new ArrayList<>(ZoneId.getAvailableZoneIds());
+        List<String> actualZones = new ArrayList<>();
+        boolean fonded = false;
+        for(String str : zones){
+            if(str.contains(zoneName)){
+                fonded = true;
+                ZonedDateTime zdt = ZonedDateTime.of(LocalDateTime.now(), ZoneId.of(str));
+                System.out.println("<" + str + ">-" + zdt.format(DateTimeFormatter.ofPattern("hh:mm")));
+            }
+        }
+        if(!fonded){
+            System.out.println("Not correct zone");
+        }
     }
 }
 
