@@ -3,34 +3,50 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.YearMonth;
 import java.time.format.TextStyle;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalAdjusters;
+import java.util.Arrays;
 import java.util.Locale;
 
-public class PrintCalendarAppl {
+public class PrintCalendarApplAdvanced {
     public static void main(String[] args) {
+        int nFirst = 0;
+        if(args.length == 3) {
+            try {
+                String weekDayName = args[2];
+                nFirst = DayOfWeek.valueOf(weekDayName.toUpperCase()).getValue();
+                System.out.println(nFirst);
+                args = Arrays.copyOf(args, 2);
+            } catch (Exception e) {
+                args = Arrays.copyOf(args, 2);
+            }
+        }
+
         int[] monthYear = args.length == 2 ? getMonthYear(args) : GetCurrentMonthYear();
         if(monthYear == null){
             System.out.println("Wrong input, must be <month number> <year number>");
             return;
         }
-        printMonthYear(monthYear[0], monthYear[1]);
+        printMonthYear(monthYear[0], monthYear[1], nFirst);
         System.out.println("\n");
     }
 
-    private static void printMonthYear(int month, int year) {
+    private static void printMonthYear(int month, int year, int nFirst) {
         printTitle(month, year);
-        printWeekDayNames();
-        printDates(month, year);
+        printWeekDayNames(nFirst);
+        printDates(month, year, nFirst);
 
     }
 
-    private static void printDates(int month, int year) {
+    private static void printDates(int month, int year, int nFirst) {
         System.out.println("\n");
 
         YearMonth yearMonth = YearMonth.of(year, month);
+
         LocalDate firstDayOfTheMonth = yearMonth.atDay(1);
         int firstDay = firstDayOfTheMonth.getDayOfWeek().getValue();
+        if(nFirst!=0){
+            firstDay = 7 - nFirst ;
+        }
+
 
 
         boolean flag = false;
@@ -52,12 +68,27 @@ public class PrintCalendarAppl {
 
     }
 
-    private static void printWeekDayNames() {
+    private static void printWeekDayNames(int nFirst) {
         System.out.print("\t");
-        for(int i = 1; i<=7 ; i++){
-            DayOfWeek day = DayOfWeek.of(i);
-            String dayStr = day.getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
-            System.out.print(dayStr + " ");
+        if(nFirst ==0) {
+            for (int i = 1; i <= 7; i++) {
+                DayOfWeek day = DayOfWeek.of(i);
+                String dayStr = day.getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
+                System.out.print(dayStr + " ");
+            }
+        }else{
+            for (int i = nFirst, j = 0; j < 7; j++) {
+                if(i<=7) {
+                    DayOfWeek day = DayOfWeek.of(i);
+                    String dayStr = day.getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
+                    System.out.print(dayStr + " ");
+                }else {
+                    DayOfWeek day = DayOfWeek.of(i-7);
+                    String dayStr = day.getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
+                    System.out.print(dayStr + " ");
+                }
+                i++;
+            }
         }
     }
 
@@ -86,3 +117,4 @@ public class PrintCalendarAppl {
         return res;
     }
 }
+

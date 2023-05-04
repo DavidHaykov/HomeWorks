@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05115347-9a2e-48fa-8eed-35beb0a98ca7" name="Changes" comment="Ready HW without BossTask">
+      <change afterPath="$PROJECT_DIR$/src/main/java/PrintCalendarApplAdvanced.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PrintCalendarAppl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PrintCalendarAppl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PrintCalendarAppl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PrintCalendarAppl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +49,7 @@
     <configuration name="PrintCalendarAppl" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PrintCalendarAppl" />
       <module name="_04_05_23_CW_AjusterIntro" />
-      <option name="PROGRAM_PARAMETERS" value="4 1921" />
+      <option name="PROGRAM_PARAMETERS" value="4 1921 friday" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683216470283</updated>
-      <workItem from="1683216471470" duration="9580000" />
+      <workItem from="1683216471470" duration="11832000" />
     </task>
     <task id="LOCAL-00001" summary="Ready HW without BossTask">
       <created>1683226310441</created>
@@ -69,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683226310441</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ready HW without BossTask">
+      <created>1683226993752</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683226993752</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
