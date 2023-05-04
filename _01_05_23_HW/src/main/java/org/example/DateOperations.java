@@ -39,11 +39,11 @@ public class DateOperations {
         List<String>  zones = new ArrayList<>(ZoneId.getAvailableZoneIds());
         List<String> actualZones = new ArrayList<>();
         boolean fonded = false;
-        for(String str : zones){
-            if(str.contains(zoneName)){
+        for(String zone : zones){
+            if(zone.contains(zoneName)){
                 fonded = true;
-                ZonedDateTime zdt = ZonedDateTime.of(LocalDateTime.now(), ZoneId.of(str));
-                System.out.println("<" + str + ">-" + zdt.format(DateTimeFormatter.ofPattern("hh:mm")));
+                ZonedDateTime zdt = ZonedDateTime.of(LocalDateTime.now(), ZoneId.of(zone));
+                System.out.println("<" + zone + ">-" + zdt.format(DateTimeFormatter.ofPattern("hh:mm")));
             }
         }
         if(!fonded){
