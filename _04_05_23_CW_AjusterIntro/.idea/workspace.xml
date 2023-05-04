@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05115347-9a2e-48fa-8eed-35beb0a98ca7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PrintCalendarAppl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AjusterIntro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/IsWeekendDay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/NonLeapYears.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/QueryIntro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_01_05_23_HW/target/classes/org/example/DateOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/../_01_05_23_HW/target/classes/org/example/DateOperations.class" afterDir="false" />
+    <list default="true" id="05115347-9a2e-48fa-8eed-35beb0a98ca7" name="Changes" comment="Ready HW without BossTask">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,8 +60,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683216470283</updated>
-      <workItem from="1683216471470" duration="8851000" />
+      <workItem from="1683216471470" duration="9580000" />
     </task>
+    <task id="LOCAL-00001" summary="Ready HW without BossTask">
+      <created>1683226310441</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683226310441</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,5 +88,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Ready HW without BossTask" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready HW without BossTask" />
   </component>
 </project>

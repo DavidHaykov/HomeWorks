@@ -73,9 +73,6 @@ public class PrintCalendarAppl {
     }
 
     private static int[] getMonthYear(String[] args) {
-        //if args is wrong -> return null
-        //[0] -> month
-        //[1] -> year
         int[] res = new int[2];
         try{
             res[0] = Integer.parseInt(args[0]);
