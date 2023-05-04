@@ -13,7 +13,6 @@ public class PrintCalendarApplAdvanced {
             try {
                 String weekDayName = args[2];
                 nFirst = DayOfWeek.valueOf(weekDayName.toUpperCase()).getValue();
-                System.out.println(nFirst);
                 args = Arrays.copyOf(args, 2);
             } catch (Exception e) {
                 args = Arrays.copyOf(args, 2);
@@ -43,50 +42,38 @@ public class PrintCalendarApplAdvanced {
 
         LocalDate firstDayOfTheMonth = yearMonth.atDay(1);
         int firstDay = firstDayOfTheMonth.getDayOfWeek().getValue();
-        if(nFirst!=0){
-            ;
+        if (nFirst != 0) {
+            firstDay = firstDay > nFirst ? firstDay - nFirst + 1 : 7 - nFirst + 1 + firstDay;
         }
 
-
-
         boolean flag = false;
-        for(int i = 1, j = 1; j <= Month.of(month).maxLength(); i++){
-            if(i < firstDay){
+        for (int i = 1, j = 1; j <= Month.of(month).maxLength(); i++) {
+            if (i < firstDay) {
                 System.out.printf("%4s", " ");
-            }
-            if(i == firstDay){
-                flag = true;
-            }
-            if(flag){
-                System.out.print("\t" + j);
-                j++;
-                if(i%7==0){
+            } else {
+                if (!flag) {
+                    flag = true;
+                }
+                System.out.print("\t" + j++);
+                if (i % 7 == 0) {
                     System.out.print("\n");
                 }
             }
         }
-
     }
 
     private static void printWeekDayNames(int nFirst) {
         System.out.print("\t");
-        if(nFirst ==0) {
-            for (int i = 1; i <= 7; i++) {
-                DayOfWeek day = DayOfWeek.of(i);
+        if (nFirst == 0) {
+            for (DayOfWeek day : DayOfWeek.values()) {
                 String dayStr = day.getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
                 System.out.print(dayStr + " ");
             }
-        }else{
+        } else {
             for (int i = nFirst, j = 0; j < 7; j++) {
-                if(i<=7) {
-                    DayOfWeek day = DayOfWeek.of(i);
-                    String dayStr = day.getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
-                    System.out.print(dayStr + " ");
-                }else {
-                    DayOfWeek day = DayOfWeek.of(i-7);
-                    String dayStr = day.getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
-                    System.out.print(dayStr + " ");
-                }
+                DayOfWeek day = DayOfWeek.of(i <= 7 ? i : i - 7);
+                String dayStr = day.getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
+                System.out.print(dayStr + " ");
                 i++;
             }
         }

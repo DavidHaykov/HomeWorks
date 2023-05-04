@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05115347-9a2e-48fa-8eed-35beb0a98ca7" name="Changes" comment="Ready HW without BossTask">
+    <list default="true" id="05115347-9a2e-48fa-8eed-35beb0a98ca7" name="Changes" comment="Ready HW">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PrintCalendarApplAdvanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PrintCalendarApplAdvanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PrintCalendarAppl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PrintCalendarAppl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PrintCalendarApplAdvanced" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PrintCalendarApplAdvanced" />
+      <module name="_04_05_23_CW_AjusterIntro" />
+      <option name="PROGRAM_PARAMETERS" value="10 2023 tuesday" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683216470283</updated>
-      <workItem from="1683216471470" duration="12782000" />
+      <workItem from="1683216471470" duration="14534000" />
     </task>
     <task id="LOCAL-00001" summary="Ready HW without BossTask">
       <created>1683226310441</created>
@@ -85,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683229100221</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ready HW">
+      <created>1683230240235</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683230240235</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Ready HW without BossTask" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ready HW without BossTask" />
+    <MESSAGE value="Ready HW" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ready HW" />
   </component>
 </project>
