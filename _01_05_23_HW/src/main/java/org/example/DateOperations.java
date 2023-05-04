@@ -37,7 +37,7 @@ public class DateOperations {
 
     public static void printCurrentTime(String zoneName) {
         List<String>  zones = new ArrayList<>(ZoneId.getAvailableZoneIds());
-        List<String> actualZones = new ArrayList<>();
+       
         boolean fonded = false;
         for(String zone : zones){
             if(zone.contains(zoneName)){
