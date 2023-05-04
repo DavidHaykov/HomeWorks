@@ -44,7 +44,7 @@ public class PrintCalendarApplAdvanced {
         LocalDate firstDayOfTheMonth = yearMonth.atDay(1);
         int firstDay = firstDayOfTheMonth.getDayOfWeek().getValue();
         if(nFirst!=0){
-            firstDay = 7 - nFirst ;
+            ;
         }
 
 
