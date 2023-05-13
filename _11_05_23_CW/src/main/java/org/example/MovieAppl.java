@@ -1,8 +1,8 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MovieAppl {
@@ -24,6 +24,18 @@ public class MovieAppl {
                 .dropWhile(n -> n < 6)
                 .forEach(System.out::println);
 
+
+        int[] shuffleArray = {1,2,3,4,5,6,7,8,9,10};
+        displayShuffledArray(shuffleArray);
+        sportLoto(2,100,10);
+
+    }
+    public static void sportLoto(int min, int max, int numberDigits) {
+       Random random = new Random();
+       random.ints(min, max+1)
+               .distinct()
+               .limit(numberDigits)
+               .forEach(System.out::println);
     }
     private static void displayMoviesTittleStream(Movie[] array, int year, double rating){
         Arrays.stream(array)
@@ -40,7 +52,39 @@ public class MovieAppl {
                 .skip(2)
                 .limit(3)
                 .forEach(System.out::println);
+        Arrays.stream(array)
+                .map(m -> m.rating)
+                .distinct()
+                .forEach(System.out::println);
+        Arrays.stream(array)
+                .map(m -> m.year)
+                .distinct()
+                .limit(1)
+                .forEach(System.out::println);
+        Arrays.stream(array)
+                .map(m -> m.year)
+                .distinct()
+                .skip(1)
+                .limit(1)
+                .forEach(System.out::println);
+        Arrays.stream(array)
+                .map(m -> m.title)
+                .skip(array.length-2)
+                .limit(1)
+                .forEach(System.out::println);
+        IntStream.range(0, array.length-1)
+                .mapToObj(i -> array[i+1])
+                .distinct()
+                .forEach(System.out::println);
 
+
+    }
+
+    public static void displayShuffledArray(int[] ar){
+        Arrays.stream(ar)
+                .mapToObj(Integer::valueOf)
+                .sorted((a, b) -> Math.random() > 0.5 ? -1 : 1)
+                .forEach(System.out::println);
     }
 
     private static void displayMoviesTitle(Movie[] array, int year, double rating) {
