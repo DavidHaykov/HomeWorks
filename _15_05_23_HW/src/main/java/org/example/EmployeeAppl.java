@@ -46,6 +46,16 @@ public class EmployeeAppl {
         employees.stream().filter(e -> e.getSalary() > avgSalary)
                 .forEach(e -> System.out.print("Name: " + e.getName() + ", Salary: " + e.getSalary()+ "\n"));
 
+        /*public static void displayEmployeesAvgSalary (List‹Employee› employees)
+        {
+            double avgSalary = employees.stream() .mapToInt (e -› e.salary) . average () . getAsDouble();
+            employees.stream().filter (e -› e.salary › avgSalary)
+            Imap (e -> new NameSalary (e.name, e.salary)) .forEach(System.out: :print]n);
+            forEach(e -› System.out.println(e.name + " + e.salary));
+        }
+        */      // CREATING
+
+
     }
 
 }
