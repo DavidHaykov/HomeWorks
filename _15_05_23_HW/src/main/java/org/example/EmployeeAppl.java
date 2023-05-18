@@ -34,7 +34,8 @@ public class EmployeeAppl {
         System.out.println(employees.stream()
                 .filter(e -> e.getCompany().equals(company))
                 .mapToInt(Employee::getSalary)
-                .summaryStatistics().getAverage());
+               .average()
+                .orElse(0));
 
     }
 
