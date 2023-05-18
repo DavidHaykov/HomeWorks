@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="_18_05_23_CW_Stream_Final" />
+        <module name="_18_05_23_CW_Stream_Final_COLLECT" />
       </profile>
     </annotationProcessing>
   </component>
