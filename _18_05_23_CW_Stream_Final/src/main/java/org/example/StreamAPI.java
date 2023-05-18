@@ -91,8 +91,18 @@ public class StreamAPI {
                 .collect(Collectors.groupingBy(String::length, Collectors.joining(" ")));
         map5.entrySet().forEach(System.out::println);
 
+        System.out.println();
+        Map< Integer, DoubleSummaryStatistics>  dss = Arrays.stream(array)
+                .collect(Collectors.groupingBy(m -> m.year, Collectors.summarizingDouble(m -> m.rating)));
+        dss.entrySet().forEach(System.out::println);
 
-
+        System.out.println();
+        List<String> list1 = Arrays.stream(strArray)
+                .collect(Collectors.collectingAndThen(Collectors.toList(), l -> {
+                    Collections.reverse(l);
+                    return l.stream();
+                })).toList();
+        System.out.println(list1);
     }
 
 
