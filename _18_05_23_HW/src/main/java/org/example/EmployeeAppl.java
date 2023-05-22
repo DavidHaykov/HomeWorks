@@ -1,5 +1,6 @@
 package org.example;
 
+import java.security.KeyStore;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -65,33 +66,33 @@ public class EmployeeAppl {
     // HW 18/05
 
     public static void displayBiggestCompanies (List<Employee> employees){
-        Map<Object, List<Employee>> employeeCount = employees.stream()
-                .collect(Collectors.groupingBy(e -> e.getCompany()));
-        employeeCount.entrySet()
-                .stream().sorted(new Comparator<Map.Entry<Object, List<Employee>>>() {
-                    @Override
-                    public int compare(Map.Entry<Object, List<Employee>> o1, Map.Entry<Object, List<Employee>> o2) {
-                        return Integer.compare(o2.getValue().size(), o1.getValue().size());
-                    }
-                })
-                .map(Map.Entry::getKey)
-                .limit(1)
-                .forEach(System.out::println);
+       Map<String, Long> countMap = employees.stream()
+               .collect(Collectors.groupingBy(Employee::getCompany, Collectors.counting()));
+       long maxCount = countMap.values().stream()
+               .mapToLong(Long::longValue)
+               .max()
+               .orElse(0);
+       countMap.entrySet()
+               .stream()
+               .filter(e -> e.getValue() == maxCount)
+               .map(Map.Entry::getKey)
+               .collect(Collectors.toList())
+               .forEach(System.out::println);
 
     }
 
     public static void displayCompaniesAboveAvgSalary (List<Employee> employees){
-        double avgSalary = employees.stream()
-                .mapToInt(e -> e.getSalary())
-                .average().orElse(0);
-        Map<Boolean, List<Employee>> companiesWithBiggestSalary = employees.stream()
-                .collect(Collectors.partitioningBy(e -> e.getSalary() >= avgSalary));
-        companiesWithBiggestSalary.entrySet().stream()
-                .filter(Map.Entry::getKey)
-                .flatMap(e -> e.getValue().stream())
-                .map(Employee::getCompany)
-                .distinct()
+        Map<String, Double> avgSalaryByCompany = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getCompany, Collectors.averagingDouble(Employee::getSalary)));
+        double avgSalary = avgSalaryByCompany.values().stream()
+                        .mapToDouble(Double::doubleValue)
+                        .average()
+                        .orElse(0);
+        avgSalaryByCompany.entrySet().stream()
+                .filter(e -> e.getValue() > avgSalary)
+                .map(Map.Entry::getKey)
                 .forEach(System.out::println);
+
 
     }
 
