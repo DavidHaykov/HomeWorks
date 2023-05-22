@@ -25,6 +25,7 @@ public class EmployeeAppl {
         displayBiggestCompanies(employees);
         displayCompaniesAboveAvgSalary(employees);
         displayEmployeesBySalaryIntervals(employees, 2000);
+        displayWordCounts("mama myla ramy myla myla mamu abc abc dbf ab gt ab");
 
     }
 
@@ -106,4 +107,15 @@ public class EmployeeAppl {
         intervalMap.entrySet().stream().forEach(System.out::println);
     }
 
-}
+    public static void displayWordCounts(String text){
+             Map<String, Long> wordCount = Arrays.stream(text.split("\\s+"))
+                     .map(w -> w.replaceAll("[^a-zA-Z]", ""))
+                     .filter(w -> !w.isEmpty())
+                     .collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()));
+             wordCount.entrySet().stream()
+                     .sorted(Map.Entry.<String,Long>comparingByValue().reversed().thenComparing(Map.Entry.comparingByKey()))
+                     .forEach(w -> System.out.println(w.getKey() + " -> " + w.getValue()));
+        }
+
+    }
+
