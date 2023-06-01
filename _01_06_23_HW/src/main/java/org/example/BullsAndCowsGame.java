@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class BullsAndCowsGame {
     private static final int NUMBER_LENGTH = 4;
+    private static final int MOVES_LIMIT = 20;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -20,8 +21,13 @@ public class BullsAndCowsGame {
         int moveCount = 0;
         List<String> gameHistory = new ArrayList<>();
         while(true){
-            System.out.println("Enter number from 4 digits: ");
+            if(moveCount==MOVES_LIMIT){
+                System.out.println("Game over :( ");
+                break;
+            }
+            System.out.println("\nNumber of moves left: " + (MOVES_LIMIT - moveCount) + "\nEnter number from 4 digits: ");
             String userNumber = scanner.nextLine();
+
 
             boolean correct = true;
             if(userNumber.length() < NUMBER_LENGTH || userNumber.length() > NUMBER_LENGTH || Integer.parseInt(userNumber)<0){
@@ -38,13 +44,14 @@ public class BullsAndCowsGame {
             if(correct) {
                 int cows = cowsCount(generatedNumber, userNumber);
                 int bulls = bullsCount(generatedNumber, userNumber);
-                String res = userNumber + "(" + cows + " cows, " + bulls + " bulls)";
+                String res = userNumber + " (" + cows + " cows, " + bulls + " bulls)";
                 System.out.println(res);
-                gameHistory.add(res);
                 if (bulls == NUMBER_LENGTH) {
                     System.out.println("You won!");
+                    gameHistory.add("Created number = " + res);
                     break;
                 }
+                gameHistory.add(res);
                 moveCount++;
 
             }
