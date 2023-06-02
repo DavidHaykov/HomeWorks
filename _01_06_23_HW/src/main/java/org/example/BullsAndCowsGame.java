@@ -90,7 +90,7 @@ public class BullsAndCowsGame {
     private static int cowsCount (String generatedNumber, String userNumber){
         int cows = 0;
         for(int i = 0; i< NUMBER_LENGTH; i++){
-            if(generatedNumber.contains(String.valueOf(userNumber.charAt(i)))){
+            if(generatedNumber.contains(String.valueOf(userNumber.charAt(i)))&&generatedNumber.charAt(i)!= userNumber.charAt(i)){
                 cows++;
             }
         }
