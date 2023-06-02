@@ -1,12 +1,14 @@
 package org.example;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.InvalidPathException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class BullsAndCowsGame {
     private static final int NUMBER_LENGTH = 4;
@@ -25,6 +27,7 @@ public class BullsAndCowsGame {
                 System.out.println("Game over :( ");
                 break;
             }
+            gameHistory.forEach(System.out::println);
             System.out.println("\nNumber of moves left: " + (MOVES_LIMIT - moveCount) + "\nEnter number from 4 digits: ");
             String userNumber = scanner.nextLine();
 
@@ -59,10 +62,19 @@ public class BullsAndCowsGame {
         saveGameHistory(dirPath,gameHistory,moveCount);
 
     }
+    public static boolean isDirectory( String path){
+        File directory = new File(path);
+        return directory.isDirectory();
+    }
     private static void saveGameHistory(String dirPath, List<String> gameHistory, int moveCount){
         LocalDateTime now = LocalDateTime.now();
+        String defaultDirectory = Objects.requireNonNull(BullsAndCowsGame.class.getResource("")).getPath();
+        if(!isDirectory(dirPath)){
+            dirPath = defaultDirectory;
+        }
         now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH mm ss"));
         String fileName = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH mm ss")) + "(" + moveCount + ")";
+
         try {
             FileWriter writer = new FileWriter(dirPath + "/" + fileName);
             for( String move : gameHistory){
@@ -70,8 +82,8 @@ public class BullsAndCowsGame {
             }
             writer.close();
             System.out.println("Game history saved in the file: " + fileName + " path of the directory: " + dirPath);
-        }catch (Exception e){
-            System.out.println("Game history file creating error");
+        }catch (IOException e){
+            System.out.println("Creating game history file error");
             e.printStackTrace();
         }
     }
