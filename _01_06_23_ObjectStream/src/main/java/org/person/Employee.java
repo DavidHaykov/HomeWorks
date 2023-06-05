@@ -1,4 +1,4 @@
-package org.example;
+package org.person;
 
 import java.io.Serializable;
 import java.time.LocalDate;

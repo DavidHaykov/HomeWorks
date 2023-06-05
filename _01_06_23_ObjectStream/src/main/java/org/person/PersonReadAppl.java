@@ -1,9 +1,8 @@
-package org.example;
+package org.person;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class PersonReadAppl {
     public static void main(String[] args) {
