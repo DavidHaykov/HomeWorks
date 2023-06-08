@@ -7,24 +7,27 @@ import telran.cars.dto.Model;
 import telran.cars.utils.Persistable;
 
 import java.util.HashMap;
+import java.util.Locale;
 
 @SuppressWarnings("serial")
 public class RentCompanyEmbedded extends AbstractRentCompany implements Persistable {
 
     HashMap<String, Car> cars = new HashMap<>();
-    HashMap<String, Driver> drivers = new HashMap<>();
+    HashMap<Long, Driver> drivers = new HashMap<>();
     HashMap<String, Model> models = new HashMap<>();
 
 
     @Override
     public CarsReturnCode addCar(Car car) {
-
-        return null;
+        if(!models.containsKey(car.getModelName())){
+            return CarsReturnCode.NO_MODEL;
+        }
+        return cars.put(car.getRegNumber(), car) == null ? CarsReturnCode.OK : CarsReturnCode.CAR_EXISTS;
     }
 
     @Override
     public CarsReturnCode addDriver(Driver driver) {
-        return drivers.putIfAbsent(driver.getName(), driver) == null ? CarsReturnCode.OK : CarsReturnCode.DRIVER_EXISTS;
+        return drivers.putIfAbsent(driver.getLicenceId(), driver) == null ? CarsReturnCode.OK : CarsReturnCode.DRIVER_EXISTS;
     }
 
     @Override
@@ -34,7 +37,7 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
 
     @Override
     public Car getCar(String regNumber) {
-        return null;
+        return cars.get(regNumber);
     }
 
     @Override
@@ -44,7 +47,7 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
 
     @Override
     public Driver getDriver(long licenceId) {
-        return null;
+        return drivers.get(licenceId);
     }
 
     @Override
