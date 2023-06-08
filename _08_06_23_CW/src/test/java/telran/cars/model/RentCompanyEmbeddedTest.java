@@ -19,7 +19,7 @@ class RentCompanyEmbeddedTest {
     private static final long LICENCE_ID = 123;
 
     private static final String FILE_NAME = "company.data";
-    static IRentCompany company;
+    static RentCompanyEmbedded company;
 
     static Car car = new Car(REG_NUMBER, "color", MODEL_NAME);
     static Model model = new Model(MODEL_NAME, GAS_TANK, COMPANY, COUNTRY, PRICE_DAY);
