@@ -6,10 +6,7 @@ import telran.cars.dto.Driver;
 import telran.cars.dto.Model;
 import telran.cars.utils.Persistable;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Locale;
 
@@ -60,6 +57,13 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
             out.writeObject(this);
         } catch (Exception e){
             System.out.println("Error in save method " + e.getMessage());
+        }
+    }
+    public static RentCompanyEmbedded restoreFromFile(String fileName){
+        try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName))){
+            return (RentCompanyEmbedded) in.readObject();
+        }catch (Exception e){
+            return new RentCompanyEmbedded();
         }
     }
 }
