@@ -19,15 +19,15 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
     public BooksReturnCode addBookItem(Book book) {
         if(book.getPickPeriod() < minPickPeriod){
             return BooksReturnCode.PICK_PERIOD_LESS_MIN;
-        } else if (book.getPickPeriod() >= maxPickPeriod){
+        } else if (book.getPickPeriod() > maxPickPeriod){
             return BooksReturnCode.PICK_PERIOD_GREATER_MAX;
         }
-        return books.put(book.getIsbn(), book) == null ? BooksReturnCode.OK : BooksReturnCode.BOOK_ITEM_EXISTS;
+        return books.putIfAbsent(book.getIsbn(), book) == null ? BooksReturnCode.OK : BooksReturnCode.BOOK_ITEM_EXISTS;
     }
 
     @Override
     public BooksReturnCode addReader(Reader reader) {
-        return readers.put(reader.getReaderId(), reader) == null ? BooksReturnCode.OK : BooksReturnCode.READER_EXISTS;
+        return readers.putIfAbsent(reader.getReaderId(), reader) == null ? BooksReturnCode.OK : BooksReturnCode.READER_EXISTS;
     }
 
     @Override
@@ -45,7 +45,8 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
         if(!books.containsKey(isbn)){
             return BooksReturnCode.NO_BOOK_ITEM;
         }else {
-            books.get(isbn).setAmount(amount);
+            int currentAmount = books.get(isbn).getAmount();
+            books.get(isbn).setAmount(amount + currentAmount);
             return BooksReturnCode.OK;
         }
     }
@@ -64,7 +65,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
             return (ILibrary) in.readObject();
         }catch (Exception e){
             System.out.println("Error in reading method " + e.getMessage());
-            return null;
+            return (ILibrary) new LibraryMaps();
         }
     }
 
