@@ -65,7 +65,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
             return (ILibrary) in.readObject();
         }catch (Exception e){
             System.out.println("Error in reading method " + e.getMessage());
-            return (ILibrary) new LibraryMaps();
+            return new LibraryMaps();
         }
     }
 
