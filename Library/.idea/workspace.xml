@@ -1,49 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Library/telran/library/entities/Book.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Library/telran/library/entities/BooksReturnCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Library/telran/library/entities/Reader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/AbstractLibrary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Library/telran/library/tests/LibraryMapsTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Library/telran/library/utils/Persistable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/entities/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/entities/BooksReturnCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/entities/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/model/AbstractLibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/tests/LibraryMapsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/utils/Persistable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/out/production/_08_06_23_HW_Library_Sprint_1/telran/library/entities/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/out/production/_08_06_23_HW_Library_Sprint_1/telran/library/entities/BooksReturnCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/out/production/_08_06_23_HW_Library_Sprint_1/telran/library/entities/Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/out/production/_08_06_23_HW_Library_Sprint_1/telran/library/entities/Test1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/out/production/_08_06_23_HW_Library_Sprint_1/telran/library/model/AbstractLibrary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/out/production/_08_06_23_HW_Library_Sprint_1/telran/library/model/ILibrary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/out/production/_08_06_23_HW_Library_Sprint_1/telran/library/model/LibraryMaps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/out/production/_08_06_23_HW_Library_Sprint_1/telran/library/utils/Persistable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/src/telran/library/entities/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/src/telran/library/entities/BooksReturnCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/src/telran/library/entities/Reader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/src/telran/library/model/AbstractLibrary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/src/telran/library/model/ILibrary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/src/telran/library/model/LibraryMaps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/src/telran/library/tests/LibraryMapsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_08_06_23_HW_Library_Sprint_1/src/telran/library/utils/Persistable.java" beforeDir="false" />
+    <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="First sprint">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/library/entities/BooksReturnCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/entities/BooksReturnCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/library/entities/PickRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/entities/PickRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -79,8 +54,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686591768154</updated>
-      <workItem from="1686591770376" duration="775000" />
+      <workItem from="1686591770376" duration="3406000" />
     </task>
+    <task id="LOCAL-00001" summary="First sprint">
+      <created>1686596386174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686596386174</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,5 +79,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First sprint" />
+    <option name="LAST_COMMIT_MESSAGE" value="First sprint" />
   </component>
 </project>

@@ -3,17 +3,23 @@ package telran.library.model;
 
 import telran.library.entities.Book;
 import telran.library.entities.BooksReturnCode;
+import telran.library.entities.PickRecord;
 import telran.library.entities.Reader;
 import telran.library.utils.Persistable;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.SortedMap;
+import java.time.LocalDate;
+import java.util.*;
 
 
 public class LibraryMaps extends AbstractLibrary implements Persistable {
     private HashMap<Long, Book> books;
     private HashMap<Integer, Reader> readers;
+    //sprint 2
+    private TreeMap<LocalDate, List<PickRecord>> records;
+    private HashMap<Long, List<PickRecord>> bookRecords;
+    private HashMap<Integer, List<PickRecord>> readerRecords;
+    private HashMap<String, List<Book>> authorBooks;
 
     @Override
     public BooksReturnCode addBookItem(Book book) {
@@ -49,6 +55,77 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
             books.get(isbn).setAmount(amount + currentAmount);
             return BooksReturnCode.OK;
         }
+    }
+
+    @Override
+    public BooksReturnCode pickBook(long isbn, int readerId, LocalDate pickDate) {
+        Book book = getBookItem(isbn);
+        if(book == null){
+            return BooksReturnCode.NO_BOOK_ITEM;
+        }
+        if(book.getAmount() == book.getAmountInUse()){
+            return BooksReturnCode.BOOK_IN_USE;
+        }
+        if(!readers.containsKey(readerId)){
+            return BooksReturnCode.NO_READER;
+        }
+        PickRecord record = new PickRecord(isbn, readerId, pickDate);
+        addToBookRecords(record);
+        addToReaderRecords(record);
+        addToRecords(record);
+        book.setAmountInUse(book.getAmountInUse()+1);
+        return BooksReturnCode.OK;
+    }
+
+    private void addToRecords(PickRecord record) {
+        LocalDate date = record.getPickDate();
+        List<PickRecord> list = records.getOrDefault(date, new ArrayList<>());
+        list.add(record);
+        records.putIfAbsent(date, list);
+    }
+
+    private void addToReaderRecords(PickRecord record) {
+        int id = record.getReaderId();
+        List<PickRecord> list = readerRecords.getOrDefault(id, new ArrayList<>());
+        list.add(record);
+        readerRecords.putIfAbsent(id, list);
+
+    }
+
+    private void addToBookRecords(PickRecord record) {
+        long isbn = record.getIsbn();
+        List<PickRecord> list = bookRecords.getOrDefault(isbn, new ArrayList<>());
+        list.add(record);
+        bookRecords.putIfAbsent(isbn, list);
+    }
+
+    @Override
+    public List<Book> getBooksPickedByReader(int readerId) {
+        return readerRecords.getOrDefault(readerId, new ArrayList<>()).stream()
+                .map(pr -> getBookItem(pr.getIsbn()))
+                .distinct()
+                .toList();
+    }
+
+    @Override
+    public List<Reader> getReadersPickedBook(long isbn) {
+        return bookRecords.getOrDefault(isbn, new ArrayList<>()).stream()
+                .map(pr -> getReader(pr.getReaderId()))
+                .distinct()
+                .toList();
+    }
+
+    @Override
+    public List<Book> getBooksAuthor(String authorName) {
+        return authorBooks.getOrDefault(authorName, new ArrayList<>()).stream()
+                .filter(b -> b.getAmountInUse() < b.getAmount()).toList();
+    }
+
+    @Override
+    public List<PickRecord> getPickRecordsAtDates(LocalDate dateFrom, LocalDate dateTo) {
+        Collection<List<PickRecord>> col = records.subMap(dateFrom, dateTo).values();
+        return col.stream()
+                .flatMap(Collection::stream).toList();
     }
 
     @Override
