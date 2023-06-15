@@ -26,7 +26,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
         if (!authorBooks.containsKey(book.getAuthor())) {
             return BooksReturnCode.NO_AUTHOR;
         }
-        boolean res = books.put(book.getIsbn(), book) == null;
+        boolean res = books.putIfAbsent(book.getIsbn(), book) == null;
         if (!res) {
             return BooksReturnCode.BOOK_EXIST;
         }
@@ -74,7 +74,9 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
             return BooksReturnCode.NO_BOOK_ITEM;
         }
         List<PickRecord> list = readerRecords.get(readerId).stream()
-                .filter(pr -> pr.getIsbn() == isbn).toList();
+                .filter(pr -> {
+                    return pr.getIsbn() == isbn || pr.getReturnDate() == null;
+                }).toList();
 
         if(!list.isEmpty()){
             return BooksReturnCode.READER_READ_IT;
