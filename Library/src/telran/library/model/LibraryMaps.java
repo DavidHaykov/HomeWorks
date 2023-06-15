@@ -23,12 +23,22 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
 
     @Override
     public BooksReturnCode addBookItem(Book book) {
-        if(book.getPickPeriod() < minPickPeriod){
-            return BooksReturnCode.PICK_PERIOD_LESS_MIN;
-        } else if (book.getPickPeriod() > maxPickPeriod){
-            return BooksReturnCode.PICK_PERIOD_GREATER_MAX;
+        if (!authorBooks.containsKey(book.getAuthor())) {
+            return BooksReturnCode.NO_AUTHOR;
         }
-        return books.putIfAbsent(book.getIsbn(), book) == null ? BooksReturnCode.OK : BooksReturnCode.BOOK_ITEM_EXISTS;
+        boolean res = books.put(book.getIsbn(), book) == null;
+        if (!res) {
+            return BooksReturnCode.BOOK_EXIST;
+        }
+        addToAuthorsBook(book);
+
+        return BooksReturnCode.OK;
+    }
+    private void addToAuthorsBook(Book book){
+        String author = book.getAuthor();
+        List<Book> list = authorBooks.getOrDefault(author, new ArrayList<>());
+        list.add(book);
+        authorBooks.putIfAbsent(author, list);
     }
 
     @Override
@@ -62,6 +72,12 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
         Book book = getBookItem(isbn);
         if(book == null){
             return BooksReturnCode.NO_BOOK_ITEM;
+        }
+        List<PickRecord> list = readerRecords.get(readerId).stream()
+                .filter(pr -> pr.getIsbn() == isbn).toList();
+
+        if(!list.isEmpty()){
+            return BooksReturnCode.READER_READ_IT;
         }
         if(book.getAmount() == book.getAmountInUse()){
             return BooksReturnCode.BOOK_IN_USE;
