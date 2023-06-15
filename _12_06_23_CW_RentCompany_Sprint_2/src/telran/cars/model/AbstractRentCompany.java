@@ -26,4 +26,15 @@ public abstract class AbstractRentCompany implements IRentCompany{
     public void setFinePercent(int finePercent) {
         this.finePercent = finePercent;
     }
+
+    protected double computeCost(int rentPrice, int rentDays, int delay, int tankPercent, int tankVolume) {
+        double cost = rentPrice * rentDays;
+        if(delay > 0){
+            cost += delay * (rentPrice * (1 + (double)finePercent / 100));
+        }
+        if(tankPercent < 100){
+            cost += tankVolume * ((double)(100 - tankPercent) / 100) * gasPrice;
+        }
+        return cost;
+    }
 }

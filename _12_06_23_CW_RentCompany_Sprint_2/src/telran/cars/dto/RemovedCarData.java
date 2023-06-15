@@ -1,0 +1,37 @@
+package telran.cars.dto;
+
+import org.junit.jupiter.api.Test;
+
+import java.io.Serializable;
+import java.security.SecureRandomParameters;
+import java.util.List;
+
+@SuppressWarnings("serial")
+public class RemovedCarData implements Serializable {
+    private Car car;
+    private List<RentRecord> removedRecords;
+
+    public RemovedCarData() {
+    }
+
+    public RemovedCarData(Car car, List<RentRecord> removedRecords) {
+        this.car = car;
+        this.removedRecords = removedRecords;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public List<RentRecord> getRemovedRecords() {
+        return removedRecords;
+    }
+
+    @Override
+    public String toString() {
+        return "RemovedCarData{" +
+                "car=" + car +
+                ", removedRecords=" + removedRecords +
+                '}';
+    }
+}
