@@ -1,14 +1,13 @@
 package telran.library.model;
 
 
-import telran.library.entities.Book;
-import telran.library.entities.BooksReturnCode;
-import telran.library.entities.PickRecord;
+import telran.library.entities.*;
 import telran.library.entities.Reader;
 import telran.library.utils.Persistable;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 
@@ -21,6 +20,23 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
     private HashMap<Integer, List<PickRecord>> readerRecords;
     private HashMap<String, List<Book>> authorBooks;
 
+    @Override
+    public void save(String fileName) throws IOException {
+        try( ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))){
+            out.writeObject(this);
+        } catch (Exception e){
+            System.out.println("Error in save method " + e.getMessage());
+        }
+    }
+
+    public static ILibrary restoreFromFile(String fileName){
+        try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName))){
+            return (ILibrary) in.readObject();
+        }catch (Exception e){
+            System.out.println("Error in reading method " + e.getMessage());
+            return null;
+        }
+    }
     @Override
     public BooksReturnCode addBookItem(Book book) {
         if (!authorBooks.containsKey(book.getAuthor())) {
@@ -70,7 +86,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
     @Override
     public BooksReturnCode pickBook(long isbn, int readerId, LocalDate pickDate) {
         Book book = getBookItem(isbn);
-        if(book == null){
+        if(book == null  || book.getAmount() == -1){
             return BooksReturnCode.NO_BOOK_ITEM;
         }
         List<PickRecord> list = readerRecords.get(readerId).stream()
@@ -147,21 +163,70 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
     }
 
     @Override
-    public void save(String fileName) throws IOException {
-        try( ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName))){
-            out.writeObject(this);
-        } catch (Exception e){
-            System.out.println("Error in save method " + e.getMessage());
-        }
-    }
-
-    public static ILibrary restoreFromFile(String fileName){
-        try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(fileName))){
-            return (ILibrary) in.readObject();
-        }catch (Exception e){
-            System.out.println("Error in reading method " + e.getMessage());
+    public RemovedBookData removeBook(long isbn) {
+        Book book = getBookItem(isbn);
+        if( book == null){
             return null;
         }
+        if(book.getAmountInUse() > 0){
+            book.setAmount(-1);
+        }
+
+
+        return book.getAmountInUse() > 0 ? new RemovedBookData(book, null) : actualBookRemove(book);
+    }
+
+    private RemovedBookData actualBookRemove(Book book) {
+        long isbn = book.getIsbn();
+        List<PickRecord> list = bookRecords.get(isbn);
+        books.remove(isbn);
+        bookRecords.remove(isbn);
+        removeFromAuthorsRecords(book);
+        removeFromRecords(list);
+        return new RemovedBookData(book, list);
+    }
+
+    private void removeFromRecords(List <PickRecord> list) {
+        list.forEach(pr -> records.get(pr.getPickDate()).remove(pr));
+    }
+
+    private void removeFromAuthorsRecords(Book book) {
+        authorBooks.get(book.getAuthor()).remove(book);
+    }
+
+    @Override
+    public List<RemovedBookData> removeBooksOfAuthor(String author) {
+        List<Book> list = authorBooks.get(author);
+        if(!list.isEmpty()){
+            return list.stream()
+                    .map(b -> removeBook(b.getIsbn()))
+                    .toList();
+        }
+        return new ArrayList<>();
+    }
+
+    @Override
+    public RemovedBookData returnBook(long isbn, int readerId, LocalDate returnDate) {
+        PickRecord record = readerRecords.get(isbn)
+                .stream()
+                .filter(pr -> pr.getIsbn() == isbn && pr.getReturnDate() == null)
+                .findFirst()
+                .orElse(null);
+        if(record == null){
+            return null;
+        }
+
+        Book book = getBookItem(isbn);
+        updateRecord(record, returnDate, book);
+        book.setAmountInUse(book.getAmountInUse() - 1);
+        return book.getAmount() == -1 && book.getAmountInUse() == 0 ? actualBookRemove(book) : new RemovedBookData(book, null);
+    }
+
+    private void updateRecord(PickRecord record, LocalDate returnDate, Book book) {
+        long realPickDays = ChronoUnit.DAYS.between(record.getPickDate(), returnDate);
+        int delay = realPickDays > book.getPickPeriod() ? (int)(realPickDays - book.getPickPeriod()) : 0;
+        record.setReturnDate(returnDate);
+        record.setDelayDays(delay);
     }
 
 
