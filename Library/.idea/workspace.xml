@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Third sprint">
-      <change beforePath="$PROJECT_DIR$/../_15_06_23_HW.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../_15_06_23_HW.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/entities/ReaderDelay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,18 +28,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/davidhajkov/Documents/Prog/JAVA-20/Library/src&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/davidhajkov/Documents/Prog/JAVA-20/Library"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -59,6 +62,7 @@
       <workItem from="1686860565276" duration="32000" />
       <workItem from="1686860613780" duration="35000" />
       <workItem from="1687169912163" duration="276000" />
+      <workItem from="1687197323151" duration="3382000" />
     </task>
     <task id="LOCAL-00001" summary="First sprint">
       <created>1686596386174</created>

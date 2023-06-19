@@ -9,6 +9,7 @@ import java.io.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class LibraryMaps extends AbstractLibrary implements Persistable {
@@ -226,13 +227,92 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
         book.setAmountInUse(book.getAmountInUse() - 1);
         return book.getAmount() == -1 && book.getAmountInUse() == 0 ? actualBookRemove(book) : new RemovedBookData(book, null);
     }
-
     private void updateRecord(PickRecord record, LocalDate returnDate, Book book) {
         long realPickDays = ChronoUnit.DAYS.between(record.getPickDate(), returnDate);
         int delay = realPickDays > book.getPickPeriod() ? (int)(realPickDays - book.getPickPeriod()) : 0;
         record.setReturnDate(returnDate);
         record.setDelayDays(delay);
     }
+// sprint 4
+    @Override
+    public List<ReaderDelay> getReadersDelayingBooks(LocalDate currentDate) {
+        return readerRecords.values().stream()
+                .flatMap(Collection::stream)
+                .filter(pr -> pr.getReturnDate() == null && pr.getReturnDate().isBefore(currentDate))
+                .map(pr ->{
+                    Reader reader = getReader(pr.getReaderId());
+                    long delay = ChronoUnit.DAYS.between(pr.getPickDate(), currentDate);
+                    return new ReaderDelay(reader.getReaderId(), reader.getName(), reader.getPhone(), reader.getBirthDate(), reader, (int)delay);
+                })
+                .toList();
+    }
+
+    @Override
+    public List<ReaderDelay> getReadersDelayedBook() {
+        return readerRecords.values().stream()
+                .flatMap(Collection::stream)
+                .filter(pr -> pr.getReturnDate() == null)
+                .map(pr ->{
+                    Reader reader = getReader(pr.getReaderId());
+                    long delay = ChronoUnit.DAYS.between(pr.getPickDate(), pr.getReturnDate());
+                    return new ReaderDelay(reader.getReaderId(), reader.getName(), reader.getPhone(), reader.getBirthDate(), reader, (int)delay);
+                })
+                .toList();
+    }
+
+    @Override
+    public List<Book> getMostPopularBooks(LocalDate fromDate, LocalDate toDate, int fromAge, int toAge) {
+        List<PickRecord> list = getPickRecordsAtDates(fromDate, toDate);
+        Map<Book, Long> map = list.stream().filter(pr -> isProperAge(pr, fromAge, toAge))
+                .collect(Collectors.groupingBy(pr -> getBookItem(pr.getIsbn()), Collectors.counting()));
+        long max = Collections.max(map.values());
+        List<Book> popularBooks = new ArrayList<>();
+        map.forEach((k,v) -> {
+            if( v == max){
+                popularBooks.add(k);
+            }
+        });
+        return popularBooks;
+    }
+    public boolean isProperAge(PickRecord pr, int ageFrom, int ageTo){
+        LocalDate pickDate = pr.getPickDate();
+        int birthYear = getReader(pr.getReaderId()).getBirthDate().getYear();
+        int age = pickDate.getYear() - birthYear;
+        return age > ageFrom && age <= ageTo;
+    }
+
+
+    @Override
+    public List<String> getMostPopularAuthors() {
+        Map<String, Long> map = bookRecords.values().stream()
+                .flatMap(List::stream)
+                .map(pr -> getBookItem(pr.getIsbn()))
+                .collect(Collectors.groupingBy(Book::getAuthor, Collectors.counting()));
+
+        long max = map.values().stream().mapToLong(c -> c).max().getAsLong();
+
+        return map.entrySet().stream()
+                .filter(entry -> entry.getValue() == max)
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toList());
+    }
+
+
+    @Override
+    public List<Reader> getMostActiveReaders(LocalDate fromDate, LocalDate toDate) {
+        long max = readerRecords.values().stream()
+                .mapToLong(List::size)
+                .max().getAsLong();
+        List<Reader> res = new ArrayList<>();
+        readerRecords.forEach((k, v) -> {
+            if(v.size() == max){
+                res.add(getReader(k));
+            }
+        });
+        return res;
+    }
+
+
 
 
 }

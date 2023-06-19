@@ -26,5 +26,12 @@ RemovedBookData removeBook (long isbn);
 List<RemovedBookData> removeBooksOfAuthor(String author);
 RemovedBookData returnBook(long isbn, int readerId, LocalDate returnDate);
 
+//sprint 4
+List<ReaderDelay> getReadersDelayingBooks(LocalDate currentDate);
+List<ReaderDelay> getReadersDelayedBook();
+List<Book> getMostPopularBooks(LocalDate fromDate, LocalDate toDate, int fromAge, int toAge);
+List<String> getMostPopularAuthors();
+List<Reader> getMostActiveReaders(LocalDate fromDate, LocalDate toDate);
+
 
 }
