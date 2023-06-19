@@ -302,7 +302,7 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
     @Override
     public List<Driver> getMostActiveDrivers() {
         long max = driverRecords.values()
-                .stream().mapToLong(l -> l.size())
+                .stream().mapToLong(List::size)
                 .max().getAsLong();
         List<Driver> res = new ArrayList<>();
         driverRecords.forEach((k, v) -> {
@@ -312,6 +312,7 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
         });
         return res;
     }
+
 
 
 
