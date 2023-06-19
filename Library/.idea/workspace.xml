@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Third sprint">
-      <change afterPath="$PROJECT_DIR$/src/telran/library/entities/ReaderDelay.java" afterDir="false" />
+    <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Sprint 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/entities/BooksReturnCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/entities/BooksReturnCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,18 +29,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/davidhajkov/Documents/Prog/JAVA-20/Library"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/davidhajkov/Documents/Prog/JAVA-20/Library&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
@@ -62,7 +63,8 @@
       <workItem from="1686860565276" duration="32000" />
       <workItem from="1686860613780" duration="35000" />
       <workItem from="1687169912163" duration="276000" />
-      <workItem from="1687197323151" duration="3382000" />
+      <workItem from="1687197323151" duration="3467000" />
+      <workItem from="1687202301977" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="First sprint">
       <created>1686596386174</created>
@@ -113,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687170111962</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Sprint 4">
+      <created>1687201260297</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687201260297</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +143,7 @@
     <MESSAGE value="First sprint" />
     <MESSAGE value="Second sprint" />
     <MESSAGE value="Third sprint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Third sprint" />
+    <MESSAGE value="Sprint 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint 4" />
   </component>
 </project>

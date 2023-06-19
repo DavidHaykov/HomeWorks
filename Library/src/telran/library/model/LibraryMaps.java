@@ -238,7 +238,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
     public List<ReaderDelay> getReadersDelayingBooks(LocalDate currentDate) {
         return readerRecords.values().stream()
                 .flatMap(Collection::stream)
-                .filter(pr -> pr.getReturnDate() == null && pr.getReturnDate().isBefore(currentDate))
+                .filter(pr -> pr.getReturnDate() == null)
                 .map(pr ->{
                     Reader reader = getReader(pr.getReaderId());
                     long delay = ChronoUnit.DAYS.between(pr.getPickDate(), currentDate);
@@ -251,11 +251,10 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
     public List<ReaderDelay> getReadersDelayedBook() {
         return readerRecords.values().stream()
                 .flatMap(Collection::stream)
-                .filter(pr -> pr.getReturnDate() == null)
+                .filter(pr -> pr.getDelayDays() > 0 && pr.getReturnDate() != null)
                 .map(pr ->{
                     Reader reader = getReader(pr.getReaderId());
-                    long delay = ChronoUnit.DAYS.between(pr.getPickDate(), pr.getReturnDate());
-                    return new ReaderDelay(reader.getReaderId(), reader.getName(), reader.getPhone(), reader.getBirthDate(), reader, (int)delay);
+                    return new ReaderDelay(reader.getReaderId(), reader.getName(), reader.getPhone(), reader.getBirthDate(), reader, pr.getDelayDays());
                 })
                 .toList();
     }
