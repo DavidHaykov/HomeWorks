@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Sprint 4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/entities/BooksReturnCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/entities/BooksReturnCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
-    </list>
+    <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Sprint 4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +58,7 @@
       <workItem from="1686860613780" duration="35000" />
       <workItem from="1687169912163" duration="276000" />
       <workItem from="1687197323151" duration="3467000" />
-      <workItem from="1687202301977" duration="139000" />
+      <workItem from="1687202301977" duration="236000" />
     </task>
     <task id="LOCAL-00001" summary="First sprint">
       <created>1686596386174</created>
@@ -122,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687201260297</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Sprint 4">
+      <created>1687202502020</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687202502020</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
