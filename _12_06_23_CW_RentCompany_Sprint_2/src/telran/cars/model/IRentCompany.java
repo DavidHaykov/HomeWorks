@@ -32,4 +32,9 @@ public interface IRentCompany extends Serializable {
     List<RemovedCarData> removeCarsOfModel(String modelName);
     RemovedCarData returnCar(String regNumber, long licenseId, LocalDate returnDate, int damages, int tankPercent);
 
+    //sprint 4
+    List<String> getMostPopularCarModels(LocalDate dataFrom, LocalDate dataTo, int ageFrom, int ageTo);
+    List<String> getMostProfitableCarModels(LocalDate dataFrom, LocalDate dataTo);
+    List<Driver> getMostActiveDrivers();
+
 }

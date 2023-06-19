@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Third sprint">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telran/library/entities/RemovedBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/entities/RemovedBookData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_15_06_23_HW.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../_15_06_23_HW.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,7 @@
       <workItem from="1686860461143" duration="31000" />
       <workItem from="1686860565276" duration="32000" />
       <workItem from="1686860613780" duration="35000" />
-      <workItem from="1687169912163" duration="190000" />
+      <workItem from="1687169912163" duration="276000" />
     </task>
     <task id="LOCAL-00001" summary="First sprint">
       <created>1686596386174</created>
@@ -104,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686860468159</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Third sprint">
+      <created>1687170111962</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687170111962</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

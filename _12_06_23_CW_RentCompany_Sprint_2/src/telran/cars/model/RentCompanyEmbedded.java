@@ -9,6 +9,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.spi.LocaleServiceProvider;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @SuppressWarnings("serial")
 public class RentCompanyEmbedded extends AbstractRentCompany implements Persistable {
@@ -221,7 +222,6 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
         updateCar(car, damages);
         return car.isFlRemoved() || damages > REMOVE_THRESHOLD ? actualCarRemove(car) : new RemovedCarData(car, null);
     }
-
     private void updateCar(Car car, int damages) {
         car.setInUse(false);
         if(damages >= BAD_THRESHOLD){
@@ -256,5 +256,63 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
         String modelName = cars.get(regNumber).getModelName();
         return models.get(modelName).getPriceDay();
     }
+    // sprint 4
+
+    @Override
+    public List<String> getMostPopularCarModels(LocalDate dataFrom, LocalDate dataTo, int ageFrom, int ageTo) {
+        List<RentRecord> list = getRentRecordsAtDate(dataFrom, dataTo);
+        Map<String, Long> map = list.stream().filter(rr -> isProperAge(rr, ageFrom, ageTo))
+                .collect(Collectors.groupingBy(rr -> getCar(rr.getRegNumber()).getModelName(), Collectors.counting()));
+        long max = Collections.max(map.values());
+        List<String> models = new ArrayList<>();
+        map.forEach((k, v) -> {
+            if(v == max){
+                models.add(k);
+            }
+        });
+        return models;
+    }
+    public boolean isProperAge(RentRecord rr, int ageFrom, int ageTo){
+        LocalDate rentDate = rr.getRentDate();
+        int birthYear= getDriver(rr.getLicenseId()).getBirthYear();
+        int age = rentDate.getYear() - birthYear;
+        return age > ageFrom && age <= ageTo;
+    }
+
+
+    @Override
+    public List<String> getMostProfitableCarModels(LocalDate dataFrom, LocalDate dataTo) {
+        List<RentRecord> list = getRentRecordsAtDate(dataFrom, dataTo);
+        if(list.isEmpty()){
+            return  new ArrayList<>();
+        }
+        Map<String, Double> map = list.stream()
+                .collect(Collectors.groupingBy(rr -> getCar(rr.getRegNumber()).getModelName(),
+                        Collectors.summingDouble(RentRecord::getCost)));
+        double max = map.values().stream().mapToDouble(c -> c).max().getAsDouble();
+        List<String> models = new ArrayList<>();
+        map.forEach((k,v) -> {
+            if(v == max){
+                models.add(k);
+            }
+        });
+        return models;
+    }
+
+    @Override
+    public List<Driver> getMostActiveDrivers() {
+        long max = driverRecords.values()
+                .stream().mapToLong(l -> l.size())
+                .max().getAsLong();
+        List<Driver> res = new ArrayList<>();
+        driverRecords.forEach((k, v) -> {
+            if(v.size() == max){
+                res.add(getDriver(k));
+            }
+        });
+        return res;
+    }
+
+
 
 }
