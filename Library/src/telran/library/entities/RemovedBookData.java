@@ -2,9 +2,10 @@ package telran.library.entities;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.Serializable;
 import java.util.List;
-
-public class RemovedBookData {
+@SuppressWarnings("serial")
+public class RemovedBookData implements Serializable {
     private Book book;
     private List<PickRecord> records;
 

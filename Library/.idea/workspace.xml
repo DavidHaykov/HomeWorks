@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Third sprint">
-      <change afterPath="$PROJECT_DIR$/src/telran/library/entities/RemovedBookData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/library/entities/RemovedBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/entities/RemovedBookData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +57,10 @@
       <workItem from="1686747163993" duration="599000" />
       <workItem from="1686830248137" duration="4376000" />
       <workItem from="1686855787608" duration="4427000" />
+      <workItem from="1686860461143" duration="31000" />
+      <workItem from="1686860565276" duration="32000" />
+      <workItem from="1686860613780" duration="35000" />
+      <workItem from="1687169912163" duration="190000" />
     </task>
     <task id="LOCAL-00001" summary="First sprint">
       <created>1686596386174</created>
@@ -94,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686841426605</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Third sprint">
+      <created>1686860468159</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686860468159</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First sprint" />
     <MESSAGE value="Second sprint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second sprint" />
+    <MESSAGE value="Third sprint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Third sprint" />
   </component>
 </project>

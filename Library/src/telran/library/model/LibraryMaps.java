@@ -183,7 +183,12 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
         bookRecords.remove(isbn);
         removeFromAuthorsRecords(book);
         removeFromRecords(list);
+        removeFromReaders(list);
         return new RemovedBookData(book, list);
+    }
+
+    private void removeFromReaders(List<PickRecord> list) {
+        list.forEach(pr -> readerRecords.get(pr.getReaderId()).remove(pr));
     }
 
     private void removeFromRecords(List <PickRecord> list) {
