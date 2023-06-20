@@ -242,7 +242,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
                 .map(pr ->{
                     Reader reader = getReader(pr.getReaderId());
                     long delay = ChronoUnit.DAYS.between(pr.getPickDate(), currentDate);
-                    return new ReaderDelay(reader.getReaderId(), reader.getName(), reader.getPhone(), reader.getBirthDate(), reader, (int)delay);
+                    return new ReaderDelay(reader, (int)delay);
                 })
                 .sorted(new Comparator<ReaderDelay>() {
                     @Override
@@ -259,7 +259,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
                 .filter(pr -> pr.getDelayDays() > 0 && pr.getReturnDate() != null)
                 .map(pr ->{
                     Reader reader = getReader(pr.getReaderId());
-                    return new ReaderDelay(reader.getReaderId(), reader.getName(), reader.getPhone(), reader.getBirthDate(), reader, pr.getDelayDays());
+                    return new ReaderDelay(reader, pr.getDelayDays());
                 })
                 .sorted(new Comparator<ReaderDelay>() {
                     @Override

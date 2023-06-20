@@ -5,15 +5,14 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class ReaderDelay extends Reader{
+public class ReaderDelay{
     private Reader reader;
     private int delay;
 
     public ReaderDelay() {
     }
 
-    public ReaderDelay(int readerId, String name, String phone, LocalDate birthDate, Reader reader, int delay) {
-        super(readerId, name, phone, birthDate);
+    public ReaderDelay(Reader reader, int delay) {
         this.reader = reader;
         this.delay = delay;
     }
