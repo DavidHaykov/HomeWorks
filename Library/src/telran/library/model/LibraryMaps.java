@@ -236,38 +236,30 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
 // sprint 4
     @Override
     public List<ReaderDelay> getReadersDelayingBooks(LocalDate currentDate) {
-        return readerRecords.values().stream()
+        return records.values().stream()
                 .flatMap(Collection::stream)
-                .filter(pr -> pr.getReturnDate() == null)
+                .filter(pr -> pr.getReturnDate() == null && ChronoUnit.DAYS.between(currentDate, pr.getPickDate()) >= 3)
                 .map(pr ->{
                     Reader reader = getReader(pr.getReaderId());
-                    long delay = ChronoUnit.DAYS.between(pr.getPickDate(), currentDate);
+                    long delay = getBookItem(pr.getIsbn()).getPickPeriod() - ChronoUnit.DAYS.between(pr.getPickDate(), currentDate);
                     return new ReaderDelay(reader, (int)delay);
                 })
-                .sorted(new Comparator<ReaderDelay>() {
-                    @Override
-                    public int compare(ReaderDelay o1, ReaderDelay o2) {
-                        return o1.getDelay() - o2.getDelay();
-                    }
-                }).toList();
+                .sorted(Comparator.comparingInt(ReaderDelay::getDelay)).toList();
     }
 
 
     @Override
     public List<ReaderDelay> getReadersDelayedBook() {
-        return readerRecords.values().stream()
+        return records.values().stream()
                 .flatMap(Collection::stream)
                 .filter(pr -> pr.getDelayDays() > 0 && pr.getReturnDate() != null)
+                .collect(Collectors.groupingBy(pr -> pr.getReaderId(), Collectors.summingInt(pr -> pr.getDelayDays())))
+                .entrySet().stream()
                 .map(pr ->{
-                    Reader reader = getReader(pr.getReaderId());
-                    return new ReaderDelay(reader, pr.getDelayDays());
+                    Reader reader = getReader(pr.getKey());
+                    return new ReaderDelay(reader, pr.getValue());
                 })
-                .sorted(new Comparator<ReaderDelay>() {
-                    @Override
-                    public int compare(ReaderDelay o1, ReaderDelay o2) {
-                        return o1.getDelay() - o2.getDelay();
-                    }
-                }).toList();
+                .sorted(Comparator.comparingInt(ReaderDelay::getDelay)).toList();
     }
 
     @Override
@@ -310,11 +302,25 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
 
     @Override
     public List<Reader> getMostActiveReaders(LocalDate fromDate, LocalDate toDate) {
-        long max = readerRecords.values().stream()
+        Map<Integer, List<PickRecord>> map = readerRecords.values().stream()
+                .flatMap(List::stream)
+                .filter(pr -> {
+                    LocalDate returnDate = pr.getReturnDate();
+                    LocalDate pickDate = pr.getPickDate();
+                    if(returnDate == null){
+                        return pickDate.isBefore(toDate);
+                    }else if (returnDate.isAfter(toDate)){
+                        return pickDate.isAfter(fromDate) && pickDate.isBefore(toDate)
+                    }
+                    else {
+                        return returnDate.isAfter(fromDate.minusDays(1)) && returnDate.isBefore(toDate.plusDays(1));
+                    }
+                }).collect(Collectors.groupingBy(PickRecord::getReaderId, Collectors.toList()));
+        long max = map.values().stream()
                 .mapToLong(List::size)
                 .max().getAsLong();
         List<Reader> res = new ArrayList<>();
-        readerRecords.forEach((k, v) -> {
+        map.forEach((k, v) -> {
             if(v.size() == max){
                 res.add(getReader(k));
             }
