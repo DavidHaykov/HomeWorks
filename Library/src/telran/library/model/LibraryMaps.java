@@ -304,7 +304,8 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
     public List<Reader> getMostActiveReaders(LocalDate fromDate, LocalDate toDate) {
         Map<Integer, List<PickRecord>> map = readerRecords.entrySet().stream()
                 .filter(entry -> {
-                    List<PickRecord> list = entry.getValue();
+                    List<PickRecord> list = // getRecordsAtDates(fromDate, toDate) //todo 
+					 entry.getValue();
                     return !list.isEmpty() && list.stream().anyMatch(pr -> {
                         LocalDate returnDate = pr.getReturnDate();
                         LocalDate pickDate = pr.getPickDate();
