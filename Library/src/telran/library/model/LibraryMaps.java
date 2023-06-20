@@ -302,20 +302,22 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
 
     @Override
     public List<Reader> getMostActiveReaders(LocalDate fromDate, LocalDate toDate) {
-        Map<Integer, List<PickRecord>> map = readerRecords.values().stream()
-                .flatMap(List::stream)
-                .filter(pr -> {
-                    LocalDate returnDate = pr.getReturnDate();
-                    LocalDate pickDate = pr.getPickDate();
-                    if(returnDate == null){
+        Map<Integer, List<PickRecord>> map = readerRecords.entrySet().stream()
+                .filter(entry -> {
+                    List<PickRecord> list = entry.getValue();
+                    return !list.isEmpty() && list.stream().anyMatch(pr -> {
+                        LocalDate returnDate = pr.getReturnDate();
+                        LocalDate pickDate = pr.getPickDate();
+                        if(returnDate == null){
                         return pickDate.isBefore(toDate);
-                    }else if (returnDate.isAfter(toDate)){
+                        }else if (returnDate.isAfter(toDate)){
                         return pickDate.isAfter(fromDate) && pickDate.isBefore(toDate);
-                    }
-                    else {
+                        }
+                        else {
                         return returnDate.isAfter(fromDate.minusDays(1)) && returnDate.isBefore(toDate.plusDays(1));
-                    }
-                }).collect(Collectors.groupingBy(PickRecord::getReaderId, Collectors.toList()));
+                        }
+                    });
+                }).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         long max = map.values().stream()
                 .mapToLong(List::size)
                 .max().getAsLong();
@@ -327,8 +329,5 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
         });
         return res;
     }
-
-
-
 
 }
