@@ -310,7 +310,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
                     if(returnDate == null){
                         return pickDate.isBefore(toDate);
                     }else if (returnDate.isAfter(toDate)){
-                        return pickDate.isAfter(fromDate) && pickDate.isBefore(toDate)
+                        return pickDate.isAfter(fromDate) && pickDate.isBefore(toDate);
                     }
                     else {
                         return returnDate.isAfter(fromDate.minusDays(1)) && returnDate.isBefore(toDate.plusDays(1));
