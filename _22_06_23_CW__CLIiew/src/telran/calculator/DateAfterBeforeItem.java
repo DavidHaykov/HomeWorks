@@ -49,8 +49,5 @@ public class DateAfterBeforeItem implements Item {
         this.inOut = inOut;
     }
 
-    @Override
-    public boolean esExit() {
-        return Item.super.esExit();
-    }
+
 }

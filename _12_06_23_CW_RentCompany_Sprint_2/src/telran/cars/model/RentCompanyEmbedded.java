@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @SuppressWarnings("serial")
-public class RentCompanyEmbedded extends AbstractRentCompany implements Persistable {
+public class RentCompanyEmbedded extends AbstractRentCompany implements Persistable, Serializable {
     private static final int REMOVE_THRESHOLD = 60;
     private static final int BAD_THRESHOLD = 30;
     private static final int GOOD_THRESHOLD = 10;
@@ -313,7 +313,11 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
         return res;
     }
 
-
+    //sprint 5
+    @Override
+    public List<String> getModelNames() {
+        return new ArrayList<>(models.keySet());
+    }
 
 
 }

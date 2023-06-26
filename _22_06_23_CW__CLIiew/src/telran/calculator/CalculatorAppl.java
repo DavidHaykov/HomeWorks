@@ -8,9 +8,9 @@ public class CalculatorAppl {
         InputOutput inOut = new ConsoleInputOutput();
         Item[] items = {
                 new CalculatorItem(inOut),
-                new ExitItem(),
                 new DateAfterBeforeItem(inOut),
-                new DaysBetweenItem(inOut)
+                new DaysBetweenItem(inOut),
+                new ExitItem()
         };
         Menu menu = new Menu(items, inOut);
         menu.runMenu();

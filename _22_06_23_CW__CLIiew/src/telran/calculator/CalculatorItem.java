@@ -32,10 +32,7 @@ public class CalculatorItem implements Item {
         inOut.outputLine(mapOperations.get(operator).apply(op1, op2));
     }
 
-    @Override
-    public boolean esExit() {
-        return Item.super.esExit();
-    }
+
     InputOutput inOut;
 
     public CalculatorItem(InputOutput inOut) {

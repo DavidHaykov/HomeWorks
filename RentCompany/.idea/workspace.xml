@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07667924-f6eb-4418-b320-628330684595" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CLIView/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLIView/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLIView/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLIView/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLIView/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLIView/CLIView.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RentCompany.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/RentCompanyAppl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/RentCompanyItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/SaveAndExitItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/clerk/AddDriverItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/clerk/GetModelCarsItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/clerk/RentCarItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/driver/GetCarItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/driver/GetDriverItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/manager/AddCarItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/cli/manager/AddModelItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/dto/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/dto/CarsReturnCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/dto/Driver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/dto/Model.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/dto/RemovedCarData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/dto/RentRecord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/dto/State.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/model/AbstractRentCompany.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/model/IRentCompany.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/model/RentCompanyEmbedded.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/tests/RentCompanyEmbeddedStatisticTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/tests/RentCompanyEmbeddedTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/utils/Persistable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/view/InputOutput.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/RentCompany/telran/cars/view/Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/RentCompanyAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/RentCompanyItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/SaveAndExitItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/clerk/AddDriverItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/clerk/GetModelCarsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/clerk/RentCarItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/clerk/ReturnCarItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/driver/GetCarDriversItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/driver/GetCarItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/driver/GetDriverItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/driver/GetDriversCarItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/manager/AddCarItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/manager/AddModelItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/manager/RemoveCarItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/manager/RemoveModelItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/statist/GetMostActiveDriversItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/statist/GetMostPopularModelsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/statist/GetMostProfitableModelsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/cli/technician/GetRecordsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/dto/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/dto/CarsReturnCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/dto/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/dto/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/dto/RemovedCarData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/dto/RentRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/dto/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/model/AbstractRentCompany.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/model/IRentCompany.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/model/RentCompanyEmbedded.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/tests/RentCompanyEmbeddedStatisticTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/tests/RentCompanyEmbeddedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/utils/Persistable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/view/ConsoleInputOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/view/ExitItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/view/InputOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/view/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/view/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/cars/view/SubMenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/RentCompanyAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/cli/RentCompanyItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/cli/SaveAndExitItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/cli/clerk/AddDriverItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/cli/driver/GetCarItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/cli/driver/GetDriverItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/cli/manager/AddCarItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/cli/manager/AddModelItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/view/ConsoleInputOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/view/ExitItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/view/InputOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/view/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/view/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/view/SubMenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/view/SubMenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/RentCompany.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/RentCompany.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/company.data" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/company.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/out/production/RentCompany/telran/cars/model/AbstractRentCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/out/production/RentCompany/telran/cars/model/AbstractRentCompany.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/out/production/RentCompany/telran/cars/model/IRentCompany.class" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/out/production/RentCompany/telran/cars/model/IRentCompany.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/out/production/RentCompany/telran/cars/model/RentCompanyEmbedded.class" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/out/production/RentCompany/telran/cars/model/RentCompanyEmbedded.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/model/AbstractRentCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/model/AbstractRentCompany.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/model/IRentCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/model/IRentCompany.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/model/RentCompanyEmbedded.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_12_06_23_CW_RentCompany_Sprint_2/src/telran/cars/model/RentCompanyEmbedded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/calculator/CalculatorAppl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/calculator/CalculatorAppl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/calculator/CalculatorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/calculator/CalculatorItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/calculator/DateAfterBeforeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/calculator/DateAfterBeforeItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/calculator/DaysBetweenItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/src/telran/calculator/DaysBetweenItem.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Rklp2fngGAbVGUoflTgZGXjIvy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/davidhajkov/Documents/Prog/JAVA-20/RentCompany/src/telran/cars/cli/manager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/telran/cars/cli/manager" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07667924-f6eb-4418-b320-628330684595" name="Changes" comment="" />
+      <created>1687802141142</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687802141142</updated>
+      <workItem from="1687802142275" duration="5221000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
