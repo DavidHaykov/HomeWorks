@@ -174,11 +174,14 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
     private RemovedCarData actualCarRemove(Car car) {
         String regNumber = car.getRegNumber();
         List<RentRecord> list = carRecords.get(regNumber);
-        cars.remove(regNumber);
-        carRecords.remove(regNumber);
-        removeFromDriverRecords(list);
-        removeFromRecords(list);
-        removeFromModelCars(car);
+        if (list != null) {
+
+            cars.remove(regNumber);
+            carRecords.remove(regNumber);
+            removeFromDriverRecords(list);
+            removeFromRecords(list);
+            removeFromModelCars(car);
+        }
         return new RemovedCarData(car, list);
     }
 
@@ -197,7 +200,7 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
     @Override
     public List<RemovedCarData> removeCarsOfModel(String modelName) {
         List<Car> list = modelCars.get(modelName);
-        if(!list.isEmpty()){
+        if(list != null && !list.isEmpty()){
             return list.stream()
                     .map(c -> removeCar(c.getRegNumber()))
                     .toList();
