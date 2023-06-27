@@ -28,6 +28,10 @@ public class GetMostPopularModelsItem extends RentCompanyItem {
         if(dateTo == null){
             return;
         }
+        if(dateTo.isBefore(dateFrom)){
+            System.out.println("Date FROM is after date TO");
+            return;
+        }
         Integer ageFrom = inOut.inputInteger("Enter min ege from 21 to 100", 21, 100);
         if(ageFrom == null){
             return;

@@ -28,6 +28,10 @@ public class GetMostProfitableModelsItem extends RentCompanyItem {
         if(dateTo == null){
             return;
         }
+        if(dateTo.isBefore(dateFrom)){
+            System.out.println("Date FROM is after date TO");
+            return;
+        }
         inOut.outputLine(company.getMostProfitableCarModels(dateFrom, dateTo));
     }
 }

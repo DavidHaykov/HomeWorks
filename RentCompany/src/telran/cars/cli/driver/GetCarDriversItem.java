@@ -18,6 +18,10 @@ public class GetCarDriversItem extends RentCompanyItem {
 
     @Override
     public void perform() throws IOException {
-        inOut.outputLine(company.getCarsByDriver(getLicenseIdIfExist()));
+        Long licenceId = getLicenseIdIfExist();
+        if(licenceId == null){
+            return;
+        }
+        inOut.outputLine(company.getCarsByDriver(licenceId));
     }
 }

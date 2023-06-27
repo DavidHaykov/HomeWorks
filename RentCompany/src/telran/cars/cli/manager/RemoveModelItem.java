@@ -26,6 +26,9 @@ public class RemoveModelItem extends RentCompanyItem {
             return;
         }
         String modelName = inOut.inputString("Enter model from " + models, models);
+        if(modelName == null){
+            return;
+        }
         inOut.outputLine(company.removeCarsOfModel(modelName));
     }
 }

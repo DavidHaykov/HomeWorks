@@ -19,6 +19,10 @@ public class RemoveCarItem extends RentCompanyItem {
 
     @Override
     public void perform() throws IOException {
-        inOut.outputLine(company.removeCar(getRegNumberIfExist()));
+        String regNumber = getRegNumberIfExist();
+        if(regNumber == null){
+            return;
+        }
+        inOut.outputLine(company.removeCar(regNumber));
     }
 }

@@ -27,6 +27,10 @@ public class ReturnCarItem extends RentCompanyItem {
         if(licenceId == null){
             return;
         }
+        if(!company.getDriversByCar(regNumber).contains(company.getDriver(licenceId))){
+            System.out.println("This driver doesn't rent this car");
+            return;
+        }
         LocalDate returnDate = inOut.inputDate("Enter return date in format dd-mm-yyyy", "dd-MM-yyyy");
         if(returnDate == null){
             return;
@@ -37,10 +41,6 @@ public class ReturnCarItem extends RentCompanyItem {
         }
         Integer tankPercent = inOut.inputInteger("Enter tank percent from 0 to 100", 0 ,100);
         if(tankPercent == null){
-            return;
-        }
-        if(!company.getDriversByCar(regNumber).contains(company.getDriver(licenceId))){
-            System.out.println("This driver doesn't rent this car");
             return;
         }
         inOut.outputLine(company.returnCar(regNumber, licenceId, returnDate, damages, tankPercent));
