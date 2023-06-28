@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Sprint 4">
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/LibraryItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/SaveAndExitItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/librarian/AddReaderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/librarian/GetAuthorBooksItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/librarian/GetReadersDelayedBooksItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/view/ConsoleInputOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/view/ExitItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/view/InputOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/view/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/view/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/view/SubMenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/ILibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RentCompany/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompany/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_26_06_23_HW.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../_26_06_23_HW.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/LibraryAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/manager/AddBookItemItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/manager/RemoveAuthorItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/manager/RemoveBookItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/reader/GetBookItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/reader/GetBooksPickedByReaderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/reader/GetReaderItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/reader/GetReadersPickedBookItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/statist/GetMostActiveReadersItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/statist/GetMostPopularAuthorsItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/entities/ReaderDelay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/entities/ReaderDelay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
       <workItem from="1687261290571" duration="30000" />
       <workItem from="1687270702099" duration="4725000" />
       <workItem from="1687275932963" duration="3989000" />
-      <workItem from="1687963736163" duration="2668000" />
+      <workItem from="1687963736163" duration="8781000" />
     </task>
     <task id="LOCAL-00001" summary="First sprint">
       <created>1686596386174</created>
@@ -233,5 +234,12 @@
     <MESSAGE value="Third sprint" />
     <MESSAGE value="Sprint 4" />
     <option name="LAST_COMMIT_MESSAGE" value="Sprint 4" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="telran.library.cli.librarian.AddReaderItem" memberName="library" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
