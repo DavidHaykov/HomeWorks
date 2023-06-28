@@ -331,4 +331,9 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
         return res;
     }
 
+    @Override
+    public List<String> getAuthorNames() {
+        return new ArrayList<>(authorBooks.keySet());
+    }
+
 }

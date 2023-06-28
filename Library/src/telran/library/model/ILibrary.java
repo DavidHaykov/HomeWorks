@@ -33,5 +33,7 @@ List<Book> getMostPopularBooks(LocalDate fromDate, LocalDate toDate, int fromAge
 List<String> getMostPopularAuthors();
 List<Reader> getMostActiveReaders(LocalDate fromDate, LocalDate toDate);
 
+List<String> getAuthorNames();
+
 
 }
