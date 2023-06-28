@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Sprint 4">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/LibraryAppl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/manager/AddBookItemItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/manager/RemoveAuthorItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/manager/RemoveBookItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/reader/GetBookItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/reader/GetBooksPickedByReaderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/reader/GetReaderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/reader/GetReadersPickedBookItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/statist/GetMostActiveReadersItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/library/cli/statist/GetMostPopularAuthorsItem.java" afterDir="false" />
+    <list default="true" id="4a387bf6-6b04-4eea-b407-f4ac6c390291" name="Changes" comment="Sprint 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/entities/ReaderDelay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/entities/ReaderDelay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/ILibrary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Library/telran/library/model/LibraryMaps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/library/model/LibraryMaps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCompany/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompany/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,19 +27,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/davidhajkov/Documents/Prog/JAVA-20/Library/src/telran/library"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/davidhajkov/Documents/Prog/JAVA-20/Library/src/telran/library&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/telran/library" />
@@ -83,7 +70,8 @@
       <workItem from="1687261290571" duration="30000" />
       <workItem from="1687270702099" duration="4725000" />
       <workItem from="1687275932963" duration="3989000" />
-      <workItem from="1687963736163" duration="8781000" />
+      <workItem from="1687963736163" duration="9054000" />
+      <workItem from="1687973191673" duration="66000" />
     </task>
     <task id="LOCAL-00001" summary="First sprint">
       <created>1686596386174</created>
@@ -211,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687276436993</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Sprint 4">
+      <created>1687972898459</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1687972898459</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Sprint 5">
+      <created>1687972910339</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1687972910339</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +235,8 @@
     <MESSAGE value="Second sprint" />
     <MESSAGE value="Third sprint" />
     <MESSAGE value="Sprint 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sprint 4" />
+    <MESSAGE value="Sprint 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sprint 5" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

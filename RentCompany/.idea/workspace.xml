@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07667924-f6eb-4418-b320-628330684595" name="Changes" comment="sprint 5">
-      <change afterPath="$PROJECT_DIR$/../Library/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/LibraryAppl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/manager/AddBookItemItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/manager/RemoveAuthorItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/manager/RemoveBookItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/reader/GetBookItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/reader/GetBooksPickedByReaderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/reader/GetReaderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/reader/GetReadersPickedBookItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/statist/GetMostActiveReadersItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Library/src/telran/library/cli/statist/GetMostPopularAuthorsItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Library/out/production/Library/telran/library/entities/ReaderDelay.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/out/production/Library/telran/library/entities/ReaderDelay.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Library/out/production/Library/telran/library/model/ILibrary.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/out/production/Library/telran/library/model/ILibrary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Library/out/production/Library/telran/library/model/LibraryMaps.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/out/production/Library/telran/library/model/LibraryMaps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +58,7 @@
       <updated>1687802141142</updated>
       <workItem from="1687802142275" duration="5384000" />
       <workItem from="1687809473021" duration="1672000" />
-      <workItem from="1687963689199" duration="6002000" />
+      <workItem from="1687963689199" duration="6248000" />
     </task>
     <task id="LOCAL-00001" summary="sprint 5">
       <created>1687807691174</created>

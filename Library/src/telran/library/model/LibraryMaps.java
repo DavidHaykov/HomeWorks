@@ -13,13 +13,13 @@ import java.util.stream.Collectors;
 
 
 public class LibraryMaps extends AbstractLibrary implements Persistable {
-    private HashMap<Long, Book> books;
-    private HashMap<Integer, Reader> readers;
+    private HashMap<Long, Book> books = new HashMap<>();
+    private HashMap<Integer, Reader> readers = new HashMap<>();
     //sprint 2
-    private TreeMap<LocalDate, List<PickRecord>> records;
-    private HashMap<Long, List<PickRecord>> bookRecords;
-    private HashMap<Integer, List<PickRecord>> readerRecords;
-    private HashMap<String, List<Book>> authorBooks;
+    private TreeMap<LocalDate, List<PickRecord>> records = new TreeMap<>();
+    private HashMap<Long, List<PickRecord>> bookRecords = new HashMap<>();
+    private HashMap<Integer, List<PickRecord>> readerRecords = new HashMap<>();
+    private HashMap<String, List<Book>> authorBooks = new HashMap<>();
 
     @Override
     public void save(String fileName) throws IOException {
@@ -35,7 +35,7 @@ public class LibraryMaps extends AbstractLibrary implements Persistable {
             return (ILibrary) in.readObject();
         }catch (Exception e){
             System.out.println("Error in reading method " + e.getMessage());
-            return null;
+            return new LibraryMaps();
         }
     }
     @Override

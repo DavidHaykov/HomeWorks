@@ -1,5 +1,6 @@
 package telran.library;
 
+import telran.library.cli.SaveAndExitItem;
 import telran.library.cli.librarian.AddReaderItem;
 import telran.library.cli.librarian.GetAuthorBooksItem;
 import telran.library.cli.librarian.GetReadersDelayedBooksItem;
@@ -40,6 +41,7 @@ public class LibraryAppl {
                 new SubMenuItem("Manager", inOut, getManagerMenuItems()),
                 new SubMenuItem("Statist", inOut, getStatistMEnuItems()),
                 new SubMenuItem("Reader", inOut, getReaderMenuItems()),
+                new SaveAndExitItem(inOut, library, LIBRARY_FILE),
                 new ExitItem()
         };
         return res;

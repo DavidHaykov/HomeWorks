@@ -4,8 +4,8 @@ package telran.library.model;
 import org.junit.jupiter.api.Test;
 
 public abstract class AbstractLibrary implements ILibrary{
-    protected int maxPickPeriod;
-    protected int minPickPeriod;
+    protected int maxPickPeriod = 90;
+    protected int minPickPeriod = 3;
 
     public int getMaxPickPeriod() {
         return maxPickPeriod;
