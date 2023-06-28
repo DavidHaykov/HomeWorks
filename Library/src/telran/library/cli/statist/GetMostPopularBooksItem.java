@@ -1,21 +1,20 @@
-package telran.cars.cli.statist;
+package telran.library.cli.statist;
 
-import telran.cars.cli.RentCompanyItem;
-import telran.cars.model.IRentCompany;
-import telran.cars.view.InputOutput;
+import telran.library.cli.LibraryItem;
+import telran.library.model.ILibrary;
+import telran.library.view.InputOutput;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class GetMostPopularModelsItem extends RentCompanyItem {
-
-    public GetMostPopularModelsItem(InputOutput inOut, IRentCompany company) {
-        super(inOut, company);
+public class GetMostPopularBooksItem extends LibraryItem {
+    public GetMostPopularBooksItem(InputOutput inOut, ILibrary library) {
+        super(inOut, library);
     }
 
     @Override
     public String displayedName() {
-        return "Get most popular models";
+        return "Get most popular books";
     }
 
     @Override
@@ -44,6 +43,6 @@ public class GetMostPopularModelsItem extends RentCompanyItem {
             System.out.println("MIN age is greater than MAX age");
             return;
         }
-        inOut.outputLine(company.getMostPopularCarModels(dateFrom, dateTo, ageFrom, ageTo));
+        inOut.outputLine(library.getMostPopularBooks(dateFrom, dateTo, ageFrom, ageTo));
     }
 }
