@@ -220,8 +220,8 @@ public class RentCompanyEmbedded extends AbstractRentCompany implements Persista
         }
         updateRecord(record, returnDate, damages, tankPercent);
         Car car = getCar(regNumber);
-        updateCar(car, damages);
-        return car.isFlRemoved() || damages > REMOVE_THRESHOLD ? actualCarRemove(car) : new RemovedCarData(car, null);
+        updateCar(car, damages);        return car.isFlRemoved() || damages > REMOVE_THRESHOLD ? actualCarRemove(car) : new RemovedCarData(car, null);
+
     }
     private void updateCar(Car car, int damages) {
         car.setInUse(false);

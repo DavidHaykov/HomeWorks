@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba6114cb-61a5-4dce-9d71-7c93eb3f6248" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_29_06_23_CW_Server_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/ProtocolTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/TestServerAppl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/TestServerApplTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/RequestJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/ResponseJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/TcpClientJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/TcpResponseCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ProtocolJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ServerClientJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ServerJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProtocolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestServerAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestServerApplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/net/RequestJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/net/ResponseJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/net/TcpClientJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/net/TcpResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/net/server/ProtocolJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/net/server/ServerClientJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telran/net/server/ServerJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/ClaculatorClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/ProtocolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/TestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/TestServerAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/RequestJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/ResponseJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/TcpClientJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/TcpResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/server/ProtocolJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/server/ServerClientJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/server/ServerJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCompany/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompany/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCompany/src/telran/cars/model/RentCompanyEmbedded.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompany/src/telran/cars/model/RentCompanyEmbedded.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Rt0xTlY42FLR6vmiMBoyZxgY05" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "/Users/davidhajkov/Documents/Prog/JAVA-20/_29_06_23_CW_Server_1"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba6114cb-61a5-4dce-9d71-7c93eb3f6248" name="Changes" comment="" />
+      <created>1688054318300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688054318300</updated>
+      <workItem from="1688054319505" duration="6512000" />
+      <workItem from="1688065628456" duration="605000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
