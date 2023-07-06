@@ -2,17 +2,22 @@ package view;
 
 import java.util.Scanner;
 
-public class ConsoleInputOutput implements InputOutput {
-    private Scanner scanner = new Scanner(System.in);
-    @Override
-    public String inputString(String prompt) {
-        System.out.println(prompt + " or cancel for exit");
-        String text = scanner.nextLine();
-        return text.equalsIgnoreCase("cancel") ? null : text;
-    }
+public class ConsoleInputOutput implements InputOutput
+{
+	Scanner scanner = new Scanner(System.in);
+	
+	@Override
+	public String inputString(String prompt)
+	{
+		System.out.println(prompt + " or cancel for exit");
+		String text = scanner.nextLine();
+		return text.equalsIgnoreCase("cancel") ? null : text;
+	}
 
-    @Override
-    public void output(Object obj) {
-        System.out.println(obj);
-    }
+	@Override
+	public void output(Object obj)
+	{
+		System.out.println(obj);
+	}
+
 }

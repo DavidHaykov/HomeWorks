@@ -2,45 +2,135 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6114cb-61a5-4dce-9d71-7c93eb3f6248" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_29_06_23_CW_Server_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/ProtocolTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/TestServerAppl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/TestServerApplTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/RequestJava.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/ResponseJava.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/TcpClientJava.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/TcpResponseCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ProtocolJava.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ServerClientJava.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ServerJava.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProtocolTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestServerAppl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestServerApplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/net/RequestJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/net/ResponseJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/net/TcpClientJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/net/TcpResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/net/server/ProtocolJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/net/server/ServerClientJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/telran/net/server/ServerJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/ClaculatorClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/ProtocolTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/TestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/TestServerAppl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/RequestJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/ResponseJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/TcpClientJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/TcpResponseCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/server/ProtocolJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/server/ServerClientJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/net/server/ServerJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Library/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RentCompany/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompany/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RentCompany/src/telran/cars/model/RentCompanyEmbedded.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompany/src/telran/cars/model/RentCompanyEmbedded.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CLI/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorClientApplication/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorClientApplication/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorClientApplication/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorClientApplication/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorClientApplication/CalculatorClientApplication.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorClientApplication/src/telran/CloseAndExitItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/CalculatorServerApplication.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CLI/view/ConsoleInputOutput.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CLI/view/ExitItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CLI/view/InputOutput.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CLI/view/Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CLI/view/Menu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CalculatorClientApplication1/telran/CalculatorClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CalculatorClientApplication1/telran/CalculatorItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CalculatorClientApplication1/telran/CalculatorTestAppl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/CalculatorClientApplication1/telran/CloseAndExitItem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/TCP/net/RequestJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/TCP/net/ResponseJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/TCP/net/TcpClientJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/TCP/net/TcpResponseCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/TCP/net/server/ProtocolJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/TCP/net/server/ServerClientJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/out/production/TCP/net/server/ServerJava.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/src/CalculatorServerAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CalculatorServerApplication/src/ProtocolCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Calculator_maven/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/CLI/CLI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/CalculatorClientApplication.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/TCP/TCP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/TCP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/ProtocolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/TestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/TestServerAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/telran/net/RequestJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/telran/net/ResponseJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/telran/net/TcpClientJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/telran/net/TcpResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/telran/net/server/ServerClientJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TCP/src/telran/net/server/ServerJava.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/libraries/CLI.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/libraries/TCP.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/libraries/src.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/out/production/_29_06_23_HW/src/telran/CalculatorTestAppl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/src/telran/CalculatorClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/src/telran/CalculatorItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/src/telran/CalculatorServerAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/src/telran/CalculatorTestAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/src/telran/CloseAndExitItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW/src/src/telran/ProtocolCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/src/main/java/telran/CalculatorClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/src/main/java/telran/CalculatorItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/src/main/java/telran/CalculatorServerAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/src/main/java/telran/CalculatorTestAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_29_06_23_HW_Maven/src/main/java/telran/ProtocolCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLI/src/view/ConsoleInputOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/src/view/ConsoleInputOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLI/src/view/ExitItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/src/view/ExitItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLI/src/view/InputOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/src/view/InputOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLI/src/view/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/src/view/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLI/src/view/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/src/view/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLI/src/view/SubMenuItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIView/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIView/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIView/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIView/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIView/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIView/CLIView.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CLI/CLI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCP/src/net/RequestJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCP/src/net/ResponseJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCP/src/net/TcpClientJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCP/src/net/TcpResponseCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCP/src/net/server/ProtocolJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCP/src/net/server/ServerClientJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TCP/src/net/server/ServerJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/_22_06_23_CW__CLIiew.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../_22_06_23_CW__CLIiew/_22_06_23_CW__CLIiew.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/ProtocolTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/ProtocolTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/TestServerAppl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/TestServerAppl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/TestServerApplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/RequestJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/RequestJava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/ResponseJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/ResponseJava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/TcpClientJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/TcpClientJava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/TcpResponseCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/TcpResponseCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ServerClientJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ServerClientJava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ServerJava.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/_29_06_23_CW_Server_1/telran/net/server/ServerJava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProtocolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProtocolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestServerAppl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestServerAppl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestServerApplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/net/RequestJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/net/ResponseJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/net/TcpClientJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/net/TcpResponseCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/net/server/ProtocolJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TCP/src/telran/net/server/ProtocolJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/net/server/ServerClientJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/telran/net/server/ServerJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/_29_06_23_HW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../_29_06_23_HW/_29_06_23_HW.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/CalculatorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CalculatorClientApplication/src/telran/CalculatorClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/CalculatorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CalculatorClientApplication/src/telran/CalculatorItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/CalculatorServerAppl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CalculatorClientApplication/src/telran/CalculatorServerAppl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/CalculatorTestAppl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CalculatorClientApplication/src/telran/CalculatorTestAppl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/ProtocolCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CalculatorClientApplication/src/telran/ProtocolCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/view/ConsoleInputOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/view/ExitItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/view/InputOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/view/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/view/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_29_06_23_HW/src/telran/view/SubMenuItem.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +173,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/telran" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -100,6 +194,9 @@
       <updated>1688054318300</updated>
       <workItem from="1688054319505" duration="6512000" />
       <workItem from="1688065628456" duration="605000" />
+      <workItem from="1688072004273" duration="164000" />
+      <workItem from="1688072189821" duration="12000" />
+      <workItem from="1688396813095" duration="154000" />
     </task>
     <servers />
   </component>

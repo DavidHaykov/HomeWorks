@@ -1,16 +1,22 @@
 package view;
 
-public class ExitItem implements Item{
-    @Override
-    public String displayedName() {
-        return "Exit";
-    }
+public class ExitItem implements Item
+{
 
-    @Override
-    public void perform() {
+	@Override
+	public String displayedName()
+	{
+		return "Exit";
+	}
 
-    }
-    public boolean esExit(){
-        return true;
-    }
+	@Override
+	public void perform()
+	{
+	}
+	
+	public boolean isExit()
+	{
+		return true;
+	}
+
 }

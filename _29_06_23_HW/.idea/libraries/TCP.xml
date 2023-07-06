@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="TCP">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../TCP" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../TCP/src" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/CLI/CLI.iml" filepath="$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/CLI/CLI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/CalculatorClientApplication.iml" filepath="$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/CalculatorClientApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CalculatorServerApplication.iml" filepath="$PROJECT_DIR$/CalculatorServerApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/TCP/TCP.iml" filepath="$PROJECT_DIR$/../Final_calculator/CalculatorClientApplication/TCP/TCP.iml" />
+    </modules>
+  </component>
+</project>
