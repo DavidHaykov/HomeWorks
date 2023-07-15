@@ -25,14 +25,14 @@ public class EmployeesClientAppl {
     public static void main(String[] args) throws Exception {
 
         Item[] items = {
-            new DisplayCompaniesAvgSalaryItem((EmployeesTcpProxy) service, inOut),
-            new HireEmployeeItem((EmployeesTcpProxy) service, inOut),
-            new FireEmployeeItem((EmployeesTcpProxy) service, inOut),
-            new DisplayAverageSalaryItem((EmployeesTcpProxy) service, inOut),
-            new DisplayEmployeeItem((EmployeesTcpProxy) service, inOut),
-            new DisplayCompaniesAvgSalaryItem((EmployeesTcpProxy) service, inOut),
-            new DisplayEmployeesSalaryItem((EmployeesTcpProxy) service, inOut),
-            new CloseConnectionAndExitItem((EmployeesTcpProxy) service, inOut)
+            new DisplayCompaniesAvgSalaryItem(service, inOut),
+            new HireEmployeeItem(service, inOut),
+            new FireEmployeeItem(service, inOut),
+            new DisplayAverageSalaryItem( service, inOut),
+            new DisplayEmployeeItem(service, inOut),
+            new DisplayCompaniesAvgSalaryItem(service, inOut),
+            new DisplayEmployeesSalaryItem(service, inOut),
+            new CloseConnectionAndExitItem(service, inOut)
         };
         Menu menu = new Menu(items, inOut);
         menu.runMenu();

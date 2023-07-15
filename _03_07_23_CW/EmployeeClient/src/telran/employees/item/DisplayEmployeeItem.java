@@ -1,12 +1,13 @@
 package telran.employees.item;
 
 import telran.employees.service.EmployeesTcpProxy;
+import telran.employees.service.IEmployees;
 import view.InputOutput;
 
 import java.io.IOException;
 
 public class DisplayEmployeeItem extends EmployeesItem{
-    public DisplayEmployeeItem(EmployeesTcpProxy employees, InputOutput inOut) {
+    public DisplayEmployeeItem(IEmployees employees, InputOutput inOut) {
         super(employees, inOut);
     }
 

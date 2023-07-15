@@ -1,14 +1,14 @@
 package telran.employees.item;
 
 import telran.employees.service.EmployeesTcpProxy;
+import telran.employees.service.IEmployees;
 import view.InputOutput;
 import view.Item;
 
 public abstract class EmployeesItem implements Item {
-    protected EmployeesTcpProxy employees;
-    protected InputOutput inOut;
-
-    public EmployeesItem(EmployeesTcpProxy employees, InputOutput inOut) {
+protected IEmployees employees;
+protected InputOutput inOut;
+    public EmployeesItem(IEmployees employees, InputOutput inOut)  {
         this.employees = employees;
         this.inOut = inOut;
     }

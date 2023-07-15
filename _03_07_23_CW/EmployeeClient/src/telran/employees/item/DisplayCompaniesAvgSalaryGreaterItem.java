@@ -1,12 +1,13 @@
 package telran.employees.item;
 
 import telran.employees.service.EmployeesTcpProxy;
+import telran.employees.service.IEmployees;
 import view.InputOutput;
 
 import java.io.IOException;
 
 public class DisplayCompaniesAvgSalaryGreaterItem extends EmployeesItem{
-    public DisplayCompaniesAvgSalaryGreaterItem(EmployeesTcpProxy employees, InputOutput inOut) {
+    public DisplayCompaniesAvgSalaryGreaterItem(IEmployees employees, InputOutput inOut) {
         super(employees, inOut);
     }
 

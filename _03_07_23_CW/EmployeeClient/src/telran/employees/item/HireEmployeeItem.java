@@ -2,12 +2,13 @@ package telran.employees.item;
 
 import telran.employees.dto.Employee;
 import telran.employees.service.EmployeesTcpProxy;
+import telran.employees.service.IEmployees;
 import view.InputOutput;
 
 import java.io.IOException;
 
 public class HireEmployeeItem extends EmployeesItem{
-    public HireEmployeeItem(EmployeesTcpProxy employees, InputOutput inOut) {
+    public HireEmployeeItem(IEmployees employees, InputOutput inOut) {
         super(employees, inOut);
     }
 

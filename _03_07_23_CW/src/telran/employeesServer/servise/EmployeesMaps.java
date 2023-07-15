@@ -44,7 +44,7 @@ public class EmployeesMaps implements IEmployees {
     @Override
     public boolean fireEmployee(int id) {
         Employee employee = getEmployeeData(id);
-        if(!employees.containsKey(employee.getId())){
+        if(!employees.containsKey(id)){
             return false;
         }
         employees.remove(employee.getId());
@@ -52,9 +52,6 @@ public class EmployeesMaps implements IEmployees {
         cur.removeIf(e -> e.getId() == employee.getId());
         if(cur.isEmpty()){
             companies.remove(employee.getCompanyName());
-        }else {
-            cur.removeIf(e -> e.getId() == employee.getId());
-            companies.put(employee.getCompanyName(), cur);
         }
         cur = salaries.getOrDefault(employee.getSalary(), new ArrayList<>());
         if(cur.isEmpty()){
@@ -86,18 +83,18 @@ public class EmployeesMaps implements IEmployees {
 
     @Override
     public List<CompanySalary> getCompaniesGreaterAvgSalary() {
-        double max = getCompaniesAvgSalary().stream()
-                .mapToDouble(CompanySalary::getAvgSalary)
-                .max().getAsDouble();
-
-        return getCompaniesAvgSalary().stream().filter(cs -> cs.getAvgSalary() == max)
-                .collect(Collectors.toList());
+        double avg = getAvgSalary();
+        return getCompaniesAvgSalary().stream()
+                .filter(cs -> cs.getAvgSalary() > avg)
+                .toList();
     }
 
     @Override
     public int getAvgSalary() {
-        double avg = salaries.keySet().stream().mapToInt(Integer::intValue)
-                .average().orElse(0);
+        double sum = employees.values().stream()
+                .mapToInt(Employee::getSalary)
+                .sum();
+        double avg = sum / employees.size();
         return (int)avg;
     }
 }

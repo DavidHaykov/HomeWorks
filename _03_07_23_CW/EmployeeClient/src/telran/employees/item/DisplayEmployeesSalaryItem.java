@@ -1,13 +1,14 @@
 package telran.employees.item;
 
 import telran.employees.service.EmployeesTcpProxy;
+import telran.employees.service.IEmployees;
 import view.InputOutput;
 
 import java.io.IOException;
 
 public class DisplayEmployeesSalaryItem extends EmployeesItem{
 
-    public DisplayEmployeesSalaryItem(EmployeesTcpProxy employees, InputOutput inOut) {
+    public DisplayEmployeesSalaryItem(IEmployees employees, InputOutput inOut) {
         super(employees, inOut);
     }
 
@@ -27,6 +28,7 @@ public class DisplayEmployeesSalaryItem extends EmployeesItem{
             return;
         }
         if(salaryTo < salaryFrom){
+            System.out.println("salary TO < salary FROM");
             return;
         }
         inOut.outputLine(employees.getEmployeesDataBySalary(salaryFrom, salaryTo));
