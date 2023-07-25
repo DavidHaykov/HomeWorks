@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07667924-f6eb-4418-b320-628330684595" name="Changes" comment="sprint 5">
-      <change afterPath="$PROJECT_DIR$/../_13_07_23_HW/src/Printer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_13_07_HW2/src/Printer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +94,7 @@
       <workItem from="1689327209759" duration="617000" />
       <workItem from="1689425343969" duration="232000" />
       <workItem from="1689432281104" duration="798000" />
+      <workItem from="1689795359861" duration="554000" />
     </task>
     <task id="LOCAL-00001" summary="sprint 5">
       <created>1687807691174</created>
