@@ -1,7 +1,8 @@
 package telran;
 
 
-import net.TcpClientJava;
+
+import telran.net.TcpClientJava;
 import view.ConsoleInputOutput;
 import view.InputOutput;
 

@@ -7,6 +7,6 @@ public class GroupSumParallelStream extends GroupSum{
 
     @Override
     public long computeSum() {
-        return Arrays.stream(numbers).parallel().flatMapToInt(Arrays::stream).sum();
+        return Arrays.stream(numbers).parallel().mapToLong(g -> Arrays.stream(g).asLongStream().sum()).sum();
     }
 }

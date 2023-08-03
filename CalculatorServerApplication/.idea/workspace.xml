@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfa55760-249a-4d46-b1a4-ad2ff5ee9601" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_27_07_23_CW/src/MessageAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_27_07_23_CW/src/MessageBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_27_07_23_CW/src/MyCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_27_07_23_CW/src/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalculatorServerAppl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculatorServerAppl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_24_07_23_CW/src/GroupSumParallelStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_24_07_23_CW/src/GroupSumParallelStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_24_07_23_CW/src/GroupSumStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_24_07_23_CW/src/GroupSumStream.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +81,7 @@
       <workItem from="1688397052212" duration="2883000" />
       <workItem from="1688504451448" duration="1553000" />
       <workItem from="1688622870903" duration="600000" />
+      <workItem from="1690826298886" duration="141000" />
     </task>
     <servers />
   </component>

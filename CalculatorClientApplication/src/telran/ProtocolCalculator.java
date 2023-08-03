@@ -1,10 +1,10 @@
 package telran;
 
 
-import net.RequestJava;
-import net.ResponseJava;
-import net.TcpResponseCode;
-import net.server.ProtocolJava;
+import telran.net.RequestJava;
+import telran.net.ResponseJava;
+import telran.net.TcpResponseCode;
+import telran.net.server.ProtocolJava;
 
 public class ProtocolCalculator implements ProtocolJava {
     @Override
