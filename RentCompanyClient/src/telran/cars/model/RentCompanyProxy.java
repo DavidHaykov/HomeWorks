@@ -84,8 +84,7 @@ public class RentCompanyProxy extends TcpClientJava implements IRentCompany {
 
     @Override
     public List<RentRecord> getRentRecordsAtDate(LocalDate fromDate, LocalDate toDate) {
-        //todo
-        return sendRequest(ApiConstants.GET_RECORDS, new StatisticsData(fromDate, toDate, 0 ,0)); // ??????????
+        return sendRequest(ApiConstants.GET_RECORDS, new StatisticsData(fromDate, toDate, 0 ,0));
     }
 
     @Override
