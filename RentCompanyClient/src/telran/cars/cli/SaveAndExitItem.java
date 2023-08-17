@@ -2,7 +2,7 @@ package telran.cars.cli;
 
 
 import telran.cars.utils.Persistable;
-import teltan.cars.model.IRentCompany;
+import telran.cars.model.IRentCompany;
 import view.InputOutput;
 
 import java.io.IOException;

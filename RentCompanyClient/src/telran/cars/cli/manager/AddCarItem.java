@@ -1,13 +1,12 @@
 package telran.cars.cli.manager;
 
 import telran.cars.cli.RentCompanyItem;
+import telran.cars.dto.Car;
+import telran.cars.model.IRentCompany;
+import view.InputOutput;
 
 import java.io.IOException;
 import java.util.List;
-
-import teltan.cars.dto.Car;
-import teltan.cars.model.IRentCompany;
-import view.InputOutput;
 
 public class AddCarItem extends RentCompanyItem {
     public AddCarItem(InputOutput inOut, IRentCompany company) {

@@ -1,6 +1,5 @@
 package telran.cars;
 
-import telran.cars.cli.SaveAndExitItem;
 import telran.cars.cli.clerk.AddDriverItem;
 import telran.cars.cli.clerk.GetModelCarsItem;
 import telran.cars.cli.clerk.RentCarItem;
@@ -18,11 +17,8 @@ import telran.cars.cli.statist.GetMostPopularModelsItem;
 import telran.cars.cli.statist.GetMostProfitableModelsItem;
 import telran.cars.cli.technician.GetRecordsItem;
 import telran.cars.model.RentCompanyProxy;
-import teltan.cars.model.IRentCompany;
+import telran.cars.model.IRentCompany;
 import view.*;
-import view.InputOutput;
-
-import java.io.IOException;
 
 public class RentCompanyClientAppl {
     private static String hostName = "localhost";

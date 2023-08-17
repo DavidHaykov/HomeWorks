@@ -1,8 +1,9 @@
 package telran.cars.cli;
 
 
-import teltan.cars.model.IRentCompany;
-import view.*;
+import telran.cars.model.IRentCompany;
+import view.InputOutput;
+import view.Item;
 
 public abstract class RentCompanyItem implements Item {
     protected InputOutput inOut;

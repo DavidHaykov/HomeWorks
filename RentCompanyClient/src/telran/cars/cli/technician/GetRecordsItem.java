@@ -1,7 +1,7 @@
 package telran.cars.cli.technician;
 
 import telran.cars.cli.RentCompanyItem;
-import teltan.cars.model.IRentCompany;
+import telran.cars.model.IRentCompany;
 import view.InputOutput;
 
 import java.io.IOException;

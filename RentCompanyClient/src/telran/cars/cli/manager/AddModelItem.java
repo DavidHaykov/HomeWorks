@@ -1,12 +1,11 @@
 package telran.cars.cli.manager;
 
 import telran.cars.cli.RentCompanyItem;
+import telran.cars.dto.Model;
+import telran.cars.model.IRentCompany;
+import view.InputOutput;
 
 import java.io.IOException;
-
-import teltan.cars.dto.Model;
-import teltan.cars.model.IRentCompany;
-import view.InputOutput;
 
 public class AddModelItem extends RentCompanyItem {
     private static final int MIN_TANK = 10;

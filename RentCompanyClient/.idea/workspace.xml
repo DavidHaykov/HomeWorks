@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3bd9ee86-7beb-4afc-9560-e26298be900e" name="Changes" comment="Ready">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/telran/cars/model/RentCompanyProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/telran/cars/model/RentCompanyProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RentCompanyClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RentCompanyClient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCompanyServer/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompanyServer/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCompanyServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompanyServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCompanyServer/RentCompanyServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCompanyServer/RentCompanyServer.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +63,9 @@
       <workItem from="1691082226354" duration="2965000" />
       <workItem from="1691085604042" duration="2166000" />
       <workItem from="1691350237151" duration="111000" />
-      <workItem from="1691350358357" duration="16000" />
+      <workItem from="1691350358357" duration="82000" />
+      <workItem from="1691350861444" duration="937000" />
+      <workItem from="1691421097730" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="Ready">
       <created>1691088947415</created>
@@ -83,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691350340406</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ready">
+      <created>1691350378574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691350378574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

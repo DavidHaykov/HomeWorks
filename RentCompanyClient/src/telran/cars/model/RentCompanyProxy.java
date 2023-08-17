@@ -1,10 +1,8 @@
 package telran.cars.model;
 
+import telran.cars.dto.*;
 import telran.net.TcpClientJava;
-import teltan.cars.api.ApiConstants;
-import teltan.cars.dto.*;
-
-import teltan.cars.model.IRentCompany;
+import telran.cars.api.ApiConstants;
 
 import java.time.LocalDate;
 import java.util.List;

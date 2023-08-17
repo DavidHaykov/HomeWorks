@@ -7,15 +7,19 @@ import java.io.EOFException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.net.SocketTimeoutException;
 
 
-public class ServerClientJava implements Runnable {
+public class ServerClientJava implements Runnable
+{
     ObjectOutputStream out;
     ObjectInputStream in;
     Socket socket;
     ProtocolJava protocol;
 
-    public ServerClientJava(Socket socket, ProtocolJava protocol) throws Exception {
+
+    public ServerClientJava(Socket socket, ProtocolJava protocol) throws Exception
+    {
         super();
         this.socket = socket;
         this.protocol = protocol;
@@ -24,19 +28,30 @@ public class ServerClientJava implements Runnable {
     }
 
     @Override
-    public void run() {
-        try {
-            while (true) {
+    public void run()
+    {
+        while (!ServerJava.shutdown.get())
+        {
+            try
+            {
                 RequestJava request = (RequestJava) in.readObject();
                 ResponseJava response = protocol.getResponse(request);
                 out.writeObject(response);
+                out.reset();
+            } catch (SocketTimeoutException e)
+            {
+                // TODO: handle exception
             }
-        } catch (EOFException e) {
-            System.out.println("Client closed connection");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+            catch (EOFException e) {
+                System.out.println("Client closed connection");
+                break;
+            }
+            catch (Exception e)
+            {
+                System.out.println(e.getMessage());
+                break;
+            }
         }
-
     }
 
 }

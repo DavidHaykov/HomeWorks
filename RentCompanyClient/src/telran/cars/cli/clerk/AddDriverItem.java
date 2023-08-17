@@ -1,9 +1,9 @@
 package telran.cars.cli.clerk;
 
 import telran.cars.cli.RentCompanyItem;
-import teltan.cars.dto.Driver;
-import teltan.cars.model.IRentCompany;
-import view.*;
+import telran.cars.dto.Driver;
+import telran.cars.model.IRentCompany;
+import view.InputOutput;
 
 import java.io.IOException;
 

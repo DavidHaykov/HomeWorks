@@ -1,11 +1,11 @@
 package telran.cars.cli.clerk;
 
 import telran.cars.cli.RentCompanyItem;
+import telran.cars.model.IRentCompany;
+import view.InputOutput;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import teltan.cars.model.IRentCompany;
-import view.*;
 
 public class ReturnCarItem extends RentCompanyItem {
     public ReturnCarItem(InputOutput inOut, IRentCompany company) {

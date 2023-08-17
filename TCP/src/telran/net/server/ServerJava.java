@@ -3,49 +3,60 @@ package telran.net.server;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
+import java.net.SocketTimeoutException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 
-public class ServerJava implements Runnable {
+public class ServerJava implements Runnable
+{
     ServerSocket serverSocket;
     ProtocolJava protocol;
     int port;
-    ExecutorService executor = Executors.newFixedThreadPool(10);
-    private volatile boolean isRunning = true;
+    static AtomicBoolean shutdown = new AtomicBoolean(false);
+    ExecutorService executor;
+    private int timeout;
 
-
-    public ServerJava(ProtocolJava protocol, int port) throws Exception {
+    public ServerJava(ProtocolJava protocol, int port, ExecutorService executor, int timeout) throws Exception
+    {
         super();
         this.protocol = protocol;
         this.port = port;
+        this.timeout = timeout;
         serverSocket = new ServerSocket(port);
+        serverSocket.setSoTimeout(timeout);//timer for accept()
+        this.executor = executor;
     }
 
-    public void stopServer() throws Exception {
-        isRunning = false;
-        serverSocket.close();
-        executor.shutdown();
-        if (!executor.awaitTermination(1, TimeUnit.MINUTES)) {
-            executor.shutdownNow();
-        }
+    public void shutdown()
+    {
+        shutdown.set(true);
     }
 
     @Override
-    public void run() {
+    public void run()
+    {
         System.out.println("listening clients on port " + port);
-        try {
-            while (isRunning) {
-                Socket socket = serverSocket.accept();
-                ServerClientJava serverClient = new ServerClientJava(socket, protocol);
-                executor.execute(serverClient);
+        try
+        {
+            while(!shutdown.get())
+            {
+                try
+                {
+                    Socket socket = serverSocket.accept();// -> to clerk
+                    socket.setSoTimeout(timeout);// timer for readObject()
+                    ServerClientJava serverClient = new ServerClientJava(socket, protocol);
+                    executor.execute(serverClient);
+                } catch (SocketTimeoutException e)
+                {
+//					continuing loop
+                }
             }
-        } catch (SocketException e) {
-            System.err.println("\nServer shutting down now...\n");
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception e)
+        {
+            System.out.println(e.getMessage());
         }
-
     }
-}
 
+}
