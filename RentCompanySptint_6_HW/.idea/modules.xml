@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CLI/CLI.iml" filepath="$PROJECT_DIR$/CLI/CLI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RentCompanyAPI/RentCompanyAPI.iml" filepath="$PROJECT_DIR$/RentCompanyAPI/RentCompanyAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RentCompanyClient/RentCompanyClient.iml" filepath="$PROJECT_DIR$/RentCompanyClient/RentCompanyClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RentCompanyServer/RentCompanyServer.iml" filepath="$PROJECT_DIR$/RentCompanyServer/RentCompanyServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RentCompanySptint_6_HW.iml" filepath="$PROJECT_DIR$/.idea/RentCompanySptint_6_HW.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TCP/TCP.iml" filepath="$PROJECT_DIR$/TCP/TCP.iml" />
+    </modules>
+  </component>
+</project>
