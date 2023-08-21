@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80d3bd0f-2cc4-4d3e-9afa-e93bf388f4e3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/X.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/Y.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/Z.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/book/example/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/book/example/BooksRandomCreationAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/book/example/BooksRestoreAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/book/example/CoverType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/book/example/Genre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/book/example/LiteratureBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/book/example/TechnicalBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/person/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/person/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/person/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/person/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/person/PersonReadAppl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/telran/person/PersonWriteAppl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2UIeWMrEgxFP7VztWF0JlEppuzE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/davidhajkov/Documents/Prog/JAVA-20-TECHNOLOGY/_21_08_23_CW/src/main/java/telran/book/example"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/telran/book/example" />
+      <recent name="$PROJECT_DIR$/src/main/java/telran" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/telran" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="telran" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80d3bd0f-2cc4-4d3e-9afa-e93bf388f4e3" name="Changes" comment="" />
+      <created>1692631555738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692631555738</updated>
+      <workItem from="1692631557595" duration="10014000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
